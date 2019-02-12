@@ -8,7 +8,7 @@ namespace Down_of_Nibo
 {
     class Eqiped
     {
-        public Item helmet { get; set; }
+        public Item Helmet { get; set; }
         public Item Body { get; set; }
         public Item Shoes { get; set; }
         public Item Weapon { get; set; }

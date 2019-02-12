@@ -8,8 +8,8 @@ namespace Down_of_Nibo
 {
     class Character
     {
-        public string name { get; set; }
-        public Inventory inventory { get; set; }
+        public string Name { get; set; }
+        public Inventory Ïnventory { get; set; }
         public Stats Stats { get; set; }
         public Eqiped Eqiped { get; set; }
 
@@ -44,7 +44,7 @@ namespace Down_of_Nibo
                 switch (i)
                 {
                     case 1:
-                        tempStats = GetStatsFromList(character, character.Eqiped.helmet);
+                        tempStats = GetStatsFromList(character, character.Eqiped.Helmet);
                         break;
                     case 2:
                         tempStats = GetStatsFromList(character, character.Eqiped.Body);
@@ -75,7 +75,7 @@ namespace Down_of_Nibo
 
             for(int i =0; i< character.Eqiped.Consumed.Count(); i++)
             {
-                foreach (Efect effect in character.Eqiped.Consumed[i].efects)
+                foreach (Efect effect in character.Eqiped.Consumed[i].Efects)
                 {
                     //Fix Stats
                     ReturnStats.Def = ReturnStats.Def + effect.FixedStats.Def;
@@ -100,7 +100,7 @@ namespace Down_of_Nibo
         {
             Stats ReturnStats = new Stats();
 
-            foreach (Efect effect in item.efects)
+            foreach (Efect effect in item.Efects)
             {
                 //Fix Stats
                 ReturnStats.Def = ReturnStats.Def + effect.FixedStats.Def;
