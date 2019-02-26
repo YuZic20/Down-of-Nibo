@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Down_of_Nibo
+namespace ClassLibrary2
 {
-    class Efect
+    public class Efect
     {
         public string Name { get; set; }
         public string Description { get; set; }

@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Down_of_Nibo
+namespace ClassLibrary2
 {
-    class Item
+    public class Item
     {
         public string Name { get; set; }
-        public int Eqipible { get; set; }//duration přidat
+        public bool Eqipible { get; set; }
+        public int duration { get; set; }
         public List<Efect> Efects {get; set; }
     }
 }

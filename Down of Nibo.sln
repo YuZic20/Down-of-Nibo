@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Down of Nibo", "Down of Nibo\Down of Nibo.csproj", "{AF4A9A8A-2DE1-439E-BAA4-B51712D104D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.csproj", "{B753FAAF-D08F-4779-B1E2-61C8B7EA7E8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ez Efect Manager", "Ez Efect Manager\Ez Efect Manager.csproj", "{0134C129-1278-419B-93C6-BFA259141E15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{AF4A9A8A-2DE1-439E-BAA4-B51712D104D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF4A9A8A-2DE1-439E-BAA4-B51712D104D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF4A9A8A-2DE1-439E-BAA4-B51712D104D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B753FAAF-D08F-4779-B1E2-61C8B7EA7E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B753FAAF-D08F-4779-B1E2-61C8B7EA7E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B753FAAF-D08F-4779-B1E2-61C8B7EA7E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B753FAAF-D08F-4779-B1E2-61C8B7EA7E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0134C129-1278-419B-93C6-BFA259141E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0134C129-1278-419B-93C6-BFA259141E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0134C129-1278-419B-93C6-BFA259141E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0134C129-1278-419B-93C6-BFA259141E15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

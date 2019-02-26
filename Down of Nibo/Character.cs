@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLibrary2;
 
 namespace Down_of_Nibo
 {
@@ -123,7 +124,7 @@ namespace Down_of_Nibo
             List<Item> returnList = new List<Item>();
             foreach(Item Items in Consumibles)
             {
-                if(Items.Eqipible > 0)
+                if(Items.duration > 0)
                 {
                     returnList.Add(Items);
                 }

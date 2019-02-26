@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Down_of_Nibo
+namespace ClassLibrary2
 {
-    class Stats
+    public class Stats
     {
         public int speed { get; set; }
         public int dex { get; set; }
