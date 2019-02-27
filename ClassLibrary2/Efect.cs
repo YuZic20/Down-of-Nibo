@@ -13,5 +13,6 @@ namespace ClassLibrary2
         public int time { get; set; }
         public Stats FixedStats { get; set; }
         public Stats MStats { get; set; }
+        public int Duration { get; set; }
     }
 }

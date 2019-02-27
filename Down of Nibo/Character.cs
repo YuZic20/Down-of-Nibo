@@ -10,9 +10,10 @@ namespace Down_of_Nibo
     class Character
     {
         public string Name { get; set; }
-        public Inventory Ïnventory { get; set; }
+        public Inventory Inventory { get; set; }
         public Stats Stats { get; set; }
         public Eqiped Eqiped { get; set; }
+        public List<Efect> efects { get; set; }//!!!!! přidat
 
 
         private Stats HalfTheStats(Stats StatsToHalfe)
