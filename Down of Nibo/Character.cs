@@ -13,7 +13,7 @@ namespace Down_of_Nibo
         public Inventory Inventory { get; set; }
         public Stats Stats { get; set; }
         public Eqiped Eqiped { get; set; }
-        public List<Efect> efects { get; set; }//!!!!! přidat
+        public List<Efect> efects { get; set; }
 
 
         private Stats HalfTheStats(Stats StatsToHalfe)
@@ -75,26 +75,25 @@ namespace Down_of_Nibo
 
             //consumible stats            
 
-            for(int i =0; i< character.Eqiped.Consumed.Count(); i++)
+            
+            foreach (Efect effect in character.efects)
             {
-                foreach (Efect effect in character.Eqiped.Consumed[i].Efects)
-                {
-                    //Fix Stats
-                    ReturnStats.Def = ReturnStats.Def + effect.FixedStats.Def;
-                    ReturnStats.speed = ReturnStats.speed + effect.FixedStats.speed;
-                    ReturnStats.str = ReturnStats.str + effect.FixedStats.str;
-                    ReturnStats.Dmg = ReturnStats.Dmg + effect.FixedStats.Dmg;
-                    ReturnStats.dex = ReturnStats.dex + effect.FixedStats.dex;
-                    //float Stas
-                    ReturnStats.Def = ReturnStats.Def + (effect.MStats.Def * character.Stats.Def);
-                    ReturnStats.speed = ReturnStats.speed + (effect.MStats.speed * character.Stats.speed);
-                    ReturnStats.str = ReturnStats.str + (effect.MStats.str * character.Stats.str);
-                    ReturnStats.Dmg = ReturnStats.Dmg + (effect.MStats.Dmg * character.Stats.Dmg);
-                    ReturnStats.dex = ReturnStats.dex + (effect.MStats.dex * character.Stats.dex);
+                //Fix Stats
+                ReturnStats.Def = ReturnStats.Def + effect.FixedStats.Def;
+                ReturnStats.speed = ReturnStats.speed + effect.FixedStats.speed;
+                ReturnStats.str = ReturnStats.str + effect.FixedStats.str;
+                ReturnStats.Dmg = ReturnStats.Dmg + effect.FixedStats.Dmg;
+                ReturnStats.dex = ReturnStats.dex + effect.FixedStats.dex;
+                //float Stas
+                ReturnStats.Def = ReturnStats.Def + (effect.MStats.Def * character.Stats.Def);
+                ReturnStats.speed = ReturnStats.speed + (effect.MStats.speed * character.Stats.speed);
+                ReturnStats.str = ReturnStats.str + (effect.MStats.str * character.Stats.str);
+                ReturnStats.Dmg = ReturnStats.Dmg + (effect.MStats.Dmg * character.Stats.Dmg);
+                ReturnStats.dex = ReturnStats.dex + (effect.MStats.dex * character.Stats.dex);
 
-                }
-                
             }
+                
+            
             return ReturnStats;
 
         }
@@ -120,14 +119,14 @@ namespace Down_of_Nibo
             }
             return ReturnStats;
         }
-        public List<Item> CheckExpirationOfConsumibles(List<Item> Consumibles)
+        public List<Efect> CheckExpirationOfConsumibles(List<Efect> Efects)
         {
-            List<Item> returnList = new List<Item>();
-            foreach(Item Items in Consumibles)
+            List<Efect> returnList = new List<Efect>();
+            foreach(Efect efect in Efects)
             {
-                if(Items.duration > 0)
+                if(efect.Duration > 0)
                 {
-                    returnList.Add(Items);
+                    returnList.Add(efect);
                 }
             }
             return returnList;

@@ -10,7 +10,7 @@ namespace ClassLibrary2
     {
         public string Name { get; set; }
         public bool Eqipible { get; set; }
-        public int duration { get; set; }//!!!! smazat
-        public List<Efect> Efects {get; set; }//!!!!! smazat
+        
+        public List<Efect> Efects {get; set; }
     }
 }
