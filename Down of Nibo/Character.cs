@@ -13,7 +13,7 @@ namespace Down_of_Nibo
         public Inventory Inventory { get; set; }
         public Stats Stats { get; set; }
         public Eqiped Eqiped { get; set; }
-        public List<Efect> efects { get; set; }
+        public List<AEfect> efects { get; set; }
 
 
         private Stats HalfTheStats(Stats StatsToHalfe)
@@ -76,7 +76,7 @@ namespace Down_of_Nibo
             //consumible stats            
 
             
-            foreach (Efect effect in character.efects)
+            foreach (AEfect effect in character.efects)
             {
                 //Fix Stats
                 ReturnStats.Def = ReturnStats.Def + effect.FixedStats.Def;
@@ -101,7 +101,7 @@ namespace Down_of_Nibo
         {
             Stats ReturnStats = new Stats();
 
-            foreach (Efect effect in item.Efects)
+            foreach (AEfect effect in item.Efects)
             {
                 //Fix Stats
                 ReturnStats.Def = ReturnStats.Def + effect.FixedStats.Def;
@@ -119,15 +119,27 @@ namespace Down_of_Nibo
             }
             return ReturnStats;
         }
-        public List<Efect> CheckExpirationOfConsumibles(List<Efect> Efects)
+        public List<Efect_Duration> CheckExpirationOfConsumibles(List<Efect_Duration> Efects)
         {
-            List<Efect> returnList = new List<Efect>();
-            foreach(Efect efect in Efects)
+            List<Efect_Duration> returnList = new List<Efect_Duration>();
+            foreach(Efect_Duration efect in Efects)
             {
                 if(efect.Duration > 0)
                 {
                     returnList.Add(efect);
                 }
+            }
+            return returnList;
+        }
+        public List<Efect_Duration> ExpireConsumibles(List<Efect_Duration> Efects, int Dose)
+        {
+            List<Efect_Duration> returnList = new List<Efect_Duration>();
+            foreach (Efect_Duration efect in Efects)
+            {
+                efect.Duration = efect.Duration + Dose;
+                returnList.Add(efect);
+               
+                
             }
             return returnList;
         }

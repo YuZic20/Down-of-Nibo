@@ -14,7 +14,7 @@ namespace ClassLibrary2
         {
             string realpath;
             Type d = data.GetType();
-            if (d == typeof(List<Efect>))
+            if (d == typeof(List<AEfect>))
             {
                 realpath = path + "Efets.txt";
             }
@@ -30,14 +30,14 @@ namespace ClassLibrary2
             string json = JsonConvert.SerializeObject(data);
             System.IO.File.WriteAllText(realpath, json);
         }
-        public List<Efect> LoadDataEfect()
+        public List<AEfect> LoadDataEfect()
         {
             string realpath;
 
                 realpath = path + "Efets.txt";
                 string file = System.IO.File.ReadAllText(realpath);
 
-                List<Efect> m = JsonConvert.DeserializeObject <List<Efect>> (file);
+                List<AEfect> m = JsonConvert.DeserializeObject <List<AEfect>> (file);
                 return m;
             
                         

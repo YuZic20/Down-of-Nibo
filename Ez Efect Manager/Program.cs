@@ -15,7 +15,7 @@ namespace Ez_Efect_Manager
             
             ClassLibrary2.FileHandle fileHandle = new FileHandle();
 
-            List<Efect> AllEffects = fileHandle.LoadDataEfect();
+            List<AEfect> AllEffects = fileHandle.LoadDataEfect();
 
             while (fin)
             {
@@ -24,9 +24,9 @@ namespace Ez_Efect_Manager
             }
             
         }
-        static void PrintEffects(List<Efect> efects)
+        static void PrintEffects(List<AEfect> efects)
         {
-            foreach(Efect efect in efects)
+            foreach(AEfect efect in efects)
             {
                 Console.WriteLine(efect.Name + " " + efect.Description + " " + efect.time);
                 PrintStat(efect.FixedStats);
@@ -38,10 +38,10 @@ namespace Ez_Efect_Manager
         {
             Console.WriteLine(stat.speed + " " + stat.dex + " " + stat.str + " " + stat.Dmg + " " + stat.Def);
         }
-        static List<Efect> Additem(List<Efect> efects)
+        static List<AEfect> Additem(List<AEfect> efects)
         {
             string input;
-            Efect NewEffect = new Efect();
+            AEfect NewEffect = new AEfect();
 
             Console.WriteLine("Name");
             input = Console.ReadLine();

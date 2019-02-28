@@ -11,6 +11,6 @@ namespace ClassLibrary2
         public string Name { get; set; }
         public bool Eqipible { get; set; }
         
-        public List<Efect> Efects {get; set; }
+        public List<AEfect> Efects {get; set; }
     }
 }
