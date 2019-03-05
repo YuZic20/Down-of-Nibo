@@ -46,7 +46,7 @@ namespace Down_of_Nibo
                 switch (i)
                 {
                     case 1:
-                        tempStats = GetStatsFromList(character, character.Eqiped.Helmet);
+                        tempStats = GetStatsFromList(character, character.Eqiped.Weapon);
                         break;
                     case 2:
                         tempStats = GetStatsFromList(character, character.Eqiped.Body);
@@ -54,9 +54,8 @@ namespace Down_of_Nibo
                     case 3:
                         tempStats = GetStatsFromList(character, character.Eqiped.Shoes);
                         break;
-                    case 4:
-                        tempStats = GetStatsFromList(character, character.Eqiped.Weapon);
-                        break;
+                    
+                        
                 }
                 //Fix Stats
                 ReturnStats.Def = ReturnStats.Def + tempStats.Def;

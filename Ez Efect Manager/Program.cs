@@ -56,7 +56,7 @@ namespace Ez_Efect_Manager
             {
                                
                 
-                Console.WriteLine(item.Name + " " + item.Eqipible+" " + item.usable);
+                Console.WriteLine(item.Name + " " + item.usable+" " + item.usable);
                 
                
                 Console.WriteLine(new string('-', 50));
@@ -101,16 +101,9 @@ namespace Ez_Efect_Manager
             input = Console.ReadLine();
             NewItem.Name = input;
 
-            Console.WriteLine("Eqipible t/f");
+            Console.WriteLine("Eqipible 0- not 1- head 2-body 3- weapon");
             input = Console.ReadLine();
-            if (input.Equals("t"))
-            {
-                NewItem.Eqipible = true;
-            }
-            else
-            {
-                NewItem.Eqipible = false;
-            }
+            NewItem.Eqip = Int32.Parse(input);
 
             Console.WriteLine("usible t/f");
             input = Console.ReadLine();
