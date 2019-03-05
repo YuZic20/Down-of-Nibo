@@ -13,7 +13,7 @@ namespace Down_of_Nibo
         public Inventory Inventory { get; set; }
         public Stats Stats { get; set; }
         public Eqiped Eqiped { get; set; }
-        public List<AEfect> efects { get; set; }
+        public List<AEffect> efects { get; set; }
 
 
         private Stats HalfTheStats(Stats StatsToHalfe)
@@ -76,7 +76,7 @@ namespace Down_of_Nibo
             //consumible stats            
 
             
-            foreach (AEfect effect in character.efects)
+            foreach (AEffect effect in character.efects)
             {
                 //Fix Stats
                 ReturnStats.Def = ReturnStats.Def + effect.FixedStats.Def;
@@ -101,7 +101,7 @@ namespace Down_of_Nibo
         {
             Stats ReturnStats = new Stats();
 
-            foreach (AEfect effect in item.Efects)
+            foreach (AEffect effect in item.Efects)
             {
                 //Fix Stats
                 ReturnStats.Def = ReturnStats.Def + effect.FixedStats.Def;
@@ -119,10 +119,10 @@ namespace Down_of_Nibo
             }
             return ReturnStats;
         }
-        public List<Efect_Duration> CheckExpirationOfConsumibles(List<Efect_Duration> Efects)
+        public List<Effect_Duration> CheckExpirationOfConsumibles(List<Effect_Duration> Efects)
         {
-            List<Efect_Duration> returnList = new List<Efect_Duration>();
-            foreach(Efect_Duration efect in Efects)
+            List<Effect_Duration> returnList = new List<Effect_Duration>();
+            foreach(Effect_Duration efect in Efects)
             {
                 if(efect.Duration > 0)
                 {
@@ -131,10 +131,10 @@ namespace Down_of_Nibo
             }
             return returnList;
         }
-        public List<Efect_Duration> ExpireConsumibles(List<Efect_Duration> Efects, int Dose)
+        public List<Effect_Duration> ExpireConsumibles(List<Effect_Duration> Efects, int Dose)
         {
-            List<Efect_Duration> returnList = new List<Efect_Duration>();
-            foreach (Efect_Duration efect in Efects)
+            List<Effect_Duration> returnList = new List<Effect_Duration>();
+            foreach (Effect_Duration efect in Efects)
             {
                 efect.Duration = efect.Duration + Dose;
                 returnList.Add(efect);

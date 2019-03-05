@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary2
 {
-    public class AEfect
+    public class AEffect
     {
         public string Name { get; set; }
         public string Description { get; set; }

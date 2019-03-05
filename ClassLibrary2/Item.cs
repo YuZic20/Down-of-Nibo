@@ -10,7 +10,8 @@ namespace ClassLibrary2
     {
         public string Name { get; set; }
         public bool Eqipible { get; set; }
-        
-        public List<AEfect> Efects {get; set; }
+        public bool usable { get; set; }
+
+        public List<AEffect> Efects {get; set; }
     }
 }

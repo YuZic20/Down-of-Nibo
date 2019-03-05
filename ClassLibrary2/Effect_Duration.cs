@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary2
 {
-    public class Efect_Duration : AEfect
+    public class Effect_Duration : AEffect
     {
 
         public int Duration { get; set; } //čas
