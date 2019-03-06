@@ -10,8 +10,9 @@ namespace ClassLibrary2
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public Stats FixedStats { get; set; }
-        public Stats MStats { get; set; }
+        public Stats FixedStats { get; set; } = new Stats();
+        public Stats MStats { get; set; } = new Stats();
 
     }
+
 }

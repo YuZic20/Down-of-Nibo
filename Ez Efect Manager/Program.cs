@@ -56,7 +56,7 @@ namespace Ez_Efect_Manager
             {
                                
                 
-                Console.WriteLine(item.Name + " " + item.usable+" " + item.usable);
+                Console.WriteLine(item.Name + " " + item.Eqip+" " + item.usable);
                 
                
                 Console.WriteLine(new string('-', 50));

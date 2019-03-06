@@ -14,6 +14,6 @@ namespace ClassLibrary2
         public int Eqip { get; set; }
         public bool usable { get; set; }
 
-        public List<AEffect> Efects {get; set; }
+        public List<AEffect> Efects { get; set; } = new List<AEffect>();
     }
 }

@@ -9,15 +9,15 @@
     <Grid>
         <StackPanel Orientation="Horizontal">
 
-            <ScrollViewer Width="400" Name="ItemButtons">
-                <StackPanel Orientation="Vertical">
-                    <Button Height="20" Content ="text" Click="ItemButton_Click" >
+            <ScrollViewer Width="400" >
+                <StackPanel Orientation="Vertical" Name="ItemButtons">
+                    
                         
-                    </Button>
+                   
                 </StackPanel>
             </ScrollViewer>
-            <ScrollViewer  Width="400" Name="EffectsChecks">
-                <StackPanel>
+            <ScrollViewer  Width="400" >
+                <StackPanel Orientation="Vertical" Name="EffectsChecks">
                     
                 </StackPanel>
             </ScrollViewer>
