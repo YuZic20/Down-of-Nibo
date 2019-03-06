@@ -16,16 +16,14 @@ using System.Windows.Shapes;
 namespace Down_of_Nibo
 {
     /// <summary>
-    /// Interakční logika pro MainWindow.xaml
+    /// Interakční logika pro Battle.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Battle : Page
     {
-        public int cislo { get; set; } = 5;
-        public MainWindow()
+        public Battle()
         {
             InitializeComponent();
-            Battle battle = new Battle();
-            MainWindowFrame.Content = battle;
+            
         }
     }
 }

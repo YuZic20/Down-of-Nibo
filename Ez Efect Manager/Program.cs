@@ -101,7 +101,7 @@ namespace Ez_Efect_Manager
             input = Console.ReadLine();
             NewItem.Name = input;
 
-            Console.WriteLine("Eqipible 0- not 1- head 2-body 3- weapon");
+            Console.WriteLine("Eqipible 0- not 1- body 2-socks 3- weapon");
             input = Console.ReadLine();
             NewItem.Eqip = Int32.Parse(input);
 
