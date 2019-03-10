@@ -8,8 +8,9 @@ namespace Down_of_Nibo
 {
     class World
     {
-        public int Turns { get; set; }
+        
         public Map WorldMap { get; set; }
+        
 
         public bool HaveTimeleft()
         {

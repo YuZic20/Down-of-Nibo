@@ -55,10 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Battle.cs" />
     <Compile Include="Battle.xaml.cs">
       <DependentUpon>Battle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Combo.cs" />
     <Compile Include="Eqiped.cs" />
+    <Compile Include="Globals.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="RegionMap.xaml.cs">
       <DependentUpon>RegionMap.xaml</DependentUpon>
