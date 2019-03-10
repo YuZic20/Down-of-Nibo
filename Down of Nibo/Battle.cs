@@ -8,5 +8,6 @@ namespace Down_of_Nibo
 {
     class Battle
     {
+
     }
 }

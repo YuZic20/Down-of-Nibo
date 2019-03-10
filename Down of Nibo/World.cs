@@ -12,7 +12,7 @@ namespace Down_of_Nibo
         public Map WorldMap { get; set; }
         
 
-        public bool HaveTimeleft()
+        public bool HaveTimeleft(int Turns)
         {
             if (Turns > 0)
             {
@@ -23,9 +23,5 @@ namespace Down_of_Nibo
                 return false;
             }
         }
-        public void SetTime(int Time)
-        {
-            Turns = Time;
-        }
-    }
+        
 }

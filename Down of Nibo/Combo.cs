@@ -58,28 +58,38 @@ namespace Down_of_Nibo
                     ComboToReturn.Add(rand.Next(4));
                 }
 
-                foreach (Combo ExistingCombo in combos) // kontrola existence komba
-                {
-                    if (ExistingCombo.ComboCode.Count() == lenght)
-                    {
-                        for (int i = lenght; i >= 1; i--)
-                        {
-                            if (ExistingCombo.ComboCode[i] == ComboToReturn[i])
-                            {
-                                Strike++;
-                            }
-                        }
-                    }
-                }
-                if(Strike == 0)
+                if(!DoesComboExist(ComboToReturn, combos))
                 {
                     return ComboToReturn;
                 }
-                else
+            }
+            
+            
+        }
+        public bool DoesComboExist(List<int> ComboToCheck, List<Combo> combos)
+        {
+            int lenght = ComboToCheck.Count();
+            int Strike = 0;
+            foreach (Combo ExistingCombo in combos) // kontrola existence komba
+            {
+                if (ExistingCombo.ComboCode.Count() == lenght)
                 {
-                    Strike = 0;
-                    ComboToReturn.Clear();
+                    for (int i = lenght; i >= 1; i--)
+                    {
+                        if (ExistingCombo.ComboCode[i] == ComboToCheck[i])
+                        {
+                            Strike++;
+                        }
+                    }
                 }
+            }
+            if (Strike == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
             }
             
         }

@@ -7,7 +7,7 @@ using ClassLibrary2;
 
 namespace Down_of_Nibo
 {
-    class Character
+    public class Character
     {
         public string Name { get; set; }
         public Inventory Inventory { get; set; }

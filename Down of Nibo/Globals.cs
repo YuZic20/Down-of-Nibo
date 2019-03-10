@@ -9,6 +9,7 @@ namespace Down_of_Nibo
     public static class Globals
     {
         public static List<Combo> leaarndCombos = new List<Combo>();
-        public static int Turns { get; set; }
+        public static int Turns { get; set; } = 100;
+        public static Character Player { get; set; } = new Character();
     }
 }
