@@ -14,9 +14,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{CF8FEA96-C0B7-46D2-B567-6FD159CE1644}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Img", "Img", "{E0228C5C-3EE2-4A78-981C-A83400624A78}"
-	ProjectSection(SolutionItems) = preProject
-		\\data.sps-prosek.local\hynekma16\Stažené\map.png = \\data.sps-prosek.local\hynekma16\Stažené\map.png
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sprites", "Sprites", "{EC5258D8-8608-4903-8268-E08B09D2E25A}"
 EndProject
