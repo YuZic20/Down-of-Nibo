@@ -7,7 +7,7 @@ using ClassLibrary2;
 
 namespace Down_of_Nibo
 {
-    class Eqiped
+    public class Eqiped
     {
         public Item Body { get; set; }
         public Item Shoes { get; set; }

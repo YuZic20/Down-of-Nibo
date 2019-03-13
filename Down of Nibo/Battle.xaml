@@ -3,12 +3,36 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:gif="http://wpfanimatedgif.codeplex.com" 
       xmlns:local="clr-namespace:Down_of_Nibo"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Battle">
-
     <Grid>
-        <Button Width="100" Name="ufffff"></Button>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <Image Source="Assets\Img\GrassLands.png"  Grid.Column="1"/>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                
+            </Grid.ColumnDefinitions>
+            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\main\Idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1"/>
+            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\HBandit\idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1"/>
+            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\Lbandit\Idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1"/>
+            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\Lbandit\Idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1"/>
+        </Grid>
+        
+        <ProgressBar Height="20" VerticalAlignment="Bottom" Grid.Column="1" ></ProgressBar>
+        <Rectangle HorizontalAlignment="Left" Width="140" Fill="White" ></Rectangle>
     </Grid>
+
+
 </Page>

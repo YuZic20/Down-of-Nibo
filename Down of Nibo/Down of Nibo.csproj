@@ -49,13 +49,15 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.18\lib\net\WpfAnimatedGif.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Battle.cs" />
     <Compile Include="Battle.xaml.cs">
       <DependentUpon>Battle.xaml</DependentUpon>
     </Compile>
@@ -107,6 +109,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,10 +126,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Img\fantasy_map_1552380625599.png" />
-    <Resource Include="Assets\sprites\bandita hev\ezgif-2-16089e7b551a_fight.gif" />
-    <Resource Include="Assets\sprites\bandita hev\ezgif-2-77730e625a60_Attac.gif" />
-    <Resource Include="Assets\sprites\bandita light\ezgif-2-4f39ca821086_Attac.gif" />
-    <Resource Include="Assets\sprites\bandita light\ezgif-2-b41b9fe4b405_Idle.gif" />
     <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\demon-Files\GIFS\demon-attack-no-breath.gif" />
     <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\demon-Files\GIFS\demon-attack.gif" />
     <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\demon-Files\GIFS\demon-idle.gif" />
@@ -162,6 +161,19 @@
     <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\public-license.txt" />
     <Resource Include="Assets\sprites\sold\ezgif-2-378d90375bea_idle.gif" />
     <Resource Include="Assets\sprites\sold\ezgif-2-80513fdbb809_Attac.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Img\GrassLands.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\HBandit\Attack.gif" />
+    <Resource Include="Assets\sprites\HBandit\Idle.gif" />
+    <Resource Include="Assets\sprites\LBandit\Attack.gif" />
+    <Resource Include="Assets\sprites\LBandit\Idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\main\Attack.gif" />
+    <Resource Include="Assets\sprites\main\Idle.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
