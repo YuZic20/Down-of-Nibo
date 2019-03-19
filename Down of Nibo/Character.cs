@@ -14,6 +14,8 @@ namespace Down_of_Nibo
         public Stats Stats { get; set; } = new Stats();
         public Eqiped Eqiped { get; set; } = new Eqiped();
         public List<AEffect> efects { get; set; } = new List<AEffect>();
+        public string GifPath_Idle { get; set; } = @"Assets\sprites\main\idle.gif";
+        public string GifPath_Attac { get; set; } = @"Assets\sprites\main\Attack.gif";
 
 
         private Stats HalfTheStats(Stats StatsToHalfe)
@@ -123,7 +125,7 @@ namespace Down_of_Nibo
 
                 }
             }
-            
+            ReturnStats.Dmg = ReturnStats.Dmg + ReturnStats.str / 2;
             return ReturnStats;
         }
         public List<Effect_Duration> CheckExpirationOfConsumibles(List<Effect_Duration> Efects)

@@ -11,7 +11,7 @@ namespace ClassLibrary2
         public int speed { get; set; }
         public int dex { get; set; }
         public int str { get; set; }
-        public int Dmg { get; set; }
+        public int Dmg { get; set; } = 10;
         public int Def { get; set; }
         public int HP { get; set; } = 100;
 

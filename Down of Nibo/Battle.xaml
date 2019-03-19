@@ -8,7 +8,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Battle">
-    <Grid>
+    <Grid KeyDown="Grid_KeyDown">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="140" />
@@ -29,10 +29,10 @@
                 <ColumnDefinition Width="1*" />
                 
             </Grid.ColumnDefinitions>
-            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\main\Idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1" Grid.RowSpan="3" Height="150" HorizontalAlignment="Right" VerticalAlignment="Bottom" Name="Player_Gif" />
-            <Image   RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Grid.RowSpan="2" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="Mob1_Gif"/>
-            <Image   RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Grid.RowSpan="3" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50 0 0 0" Name="Mob2_Gif"/>
-            <Image   RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Grid.RowSpan="4" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="Mob3_Gif"/>
+            <Image   RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1" Grid.RowSpan="3" Height="150" HorizontalAlignment="Right" VerticalAlignment="Bottom" Name="Player_Gif" gif:ImageBehavior.AnimationCompleted="AnimationCompleted"/>
+            <Image   RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Grid.RowSpan="2" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="Mob1_Gif" gif:ImageBehavior.AnimationCompleted="AnimationCompleted"/>
+            <Image   RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Grid.RowSpan="3" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50 0 0 0" Name="Mob2_Gif" gif:ImageBehavior.AnimationCompleted="AnimationCompleted"/>
+            <Image   RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Grid.RowSpan="4" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="Mob3_Gif" gif:ImageBehavior.AnimationCompleted="AnimationCompleted"/>
         </Grid>
 
         <ProgressBar Height="20" VerticalAlignment="Bottom" Grid.Column="1" Name="Player_Health" ></ProgressBar>
