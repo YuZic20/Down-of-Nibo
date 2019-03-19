@@ -13,6 +13,7 @@ namespace ClassLibrary2
         public int str { get; set; }
         public int Dmg { get; set; }
         public int Def { get; set; }
+        public int HP { get; set; } = 100;
 
 
     }

@@ -18,10 +18,10 @@ namespace Down_of_Nibo
     /// <summary>
     /// Interakční logika pro Map.xaml
     /// </summary>
-    public partial class Map : Page
+    public partial class RegionMap : Page
     {
         
-        public Map()
+        public RegionMap()
         {
             InitializeComponent();
         }

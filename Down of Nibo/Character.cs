@@ -10,10 +10,10 @@ namespace Down_of_Nibo
     public class Character
     {
         public string Name { get; set; }
-        public Inventory Inventory { get; set; }
-        public Stats Stats { get; set; }
-        public Eqiped Eqiped { get; set; }
-        public List<AEffect> efects { get; set; }
+        public Inventory Inventory { get; set; } = new Inventory();
+        public Stats Stats { get; set; } = new Stats();
+        public Eqiped Eqiped { get; set; } = new Eqiped();
+        public List<AEffect> efects { get; set; } = new List<AEffect>();
 
 
         private Stats HalfTheStats(Stats StatsToHalfe)
@@ -100,22 +100,30 @@ namespace Down_of_Nibo
         {
             Stats ReturnStats = new Stats();
 
-            foreach (AEffect effect in item.Efects)
+            if(item is null)
             {
-                //Fix Stats
-                ReturnStats.Def = ReturnStats.Def + effect.FixedStats.Def;
-                ReturnStats.speed = ReturnStats.speed + effect.FixedStats.speed;
-                ReturnStats.str = ReturnStats.str + effect.FixedStats.str;
-                ReturnStats.Dmg = ReturnStats.Dmg + effect.FixedStats.Dmg;
-                ReturnStats.dex = ReturnStats.dex + effect.FixedStats.dex;
-                //float Stas
-                ReturnStats.Def = ReturnStats.Def + (effect.MStats.Def * character.Stats.Def);
-                ReturnStats.speed = ReturnStats.speed + (effect.MStats.speed * character.Stats.speed);
-                ReturnStats.str = ReturnStats.str + (effect.MStats.str * character.Stats.str);
-                ReturnStats.Dmg = ReturnStats.Dmg + (effect.MStats.Dmg * character.Stats.Dmg);
-                ReturnStats.dex = ReturnStats.dex + (effect.MStats.dex * character.Stats.dex);
 
             }
+            else
+            {
+                foreach (AEffect effect in item.Efects)
+                {
+                    //Fix Stats
+                    ReturnStats.Def = ReturnStats.Def + effect.FixedStats.Def;
+                    ReturnStats.speed = ReturnStats.speed + effect.FixedStats.speed;
+                    ReturnStats.str = ReturnStats.str + effect.FixedStats.str;
+                    ReturnStats.Dmg = ReturnStats.Dmg + effect.FixedStats.Dmg;
+                    ReturnStats.dex = ReturnStats.dex + effect.FixedStats.dex;
+                    //float Stas
+                    ReturnStats.Def = ReturnStats.Def + (effect.MStats.Def * character.Stats.Def);
+                    ReturnStats.speed = ReturnStats.speed + (effect.MStats.speed * character.Stats.speed);
+                    ReturnStats.str = ReturnStats.str + (effect.MStats.str * character.Stats.str);
+                    ReturnStats.Dmg = ReturnStats.Dmg + (effect.MStats.Dmg * character.Stats.Dmg);
+                    ReturnStats.dex = ReturnStats.dex + (effect.MStats.dex * character.Stats.dex);
+
+                }
+            }
+            
             return ReturnStats;
         }
         public List<Effect_Duration> CheckExpirationOfConsumibles(List<Effect_Duration> Efects)

@@ -65,6 +65,7 @@
     <Compile Include="Eqiped.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Inventory.cs" />
+    <Compile Include="Mob.cs" />
     <Compile Include="RegionMap.xaml.cs">
       <DependentUpon>RegionMap.xaml</DependentUpon>
     </Compile>
@@ -174,6 +175,9 @@
   <ItemGroup>
     <Resource Include="Assets\sprites\main\Attack.gif" />
     <Resource Include="Assets\sprites\main\Idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\HBandit\bandit_img.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
