@@ -17,21 +17,59 @@
         <Image Source="Assets\Img\GrassLands.png"  Grid.Column="1"/>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
+                <RowDefinition Height="9*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
                 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
                 
             </Grid.ColumnDefinitions>
-            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\main\Idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1"/>
-            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\HBandit\idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1"/>
-            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\Lbandit\Idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1"/>
-            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\Lbandit\Idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1"/>
+            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\main\Idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="1" Grid.RowSpan="3" Height="150" HorizontalAlignment="Right" VerticalAlignment="Bottom" Name="Player_Gif" />
+            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\HBandit\idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Grid.RowSpan="2" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="Mob1_Gif"/>
+            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\Lbandit\Idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Grid.RowSpan="3" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50 0 0 0" Name="Mob2_Gif"/>
+            <Image gif:ImageBehavior.AnimatedSource="Assets\sprites\Lbandit\Idle.gif"  RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Grid.RowSpan="4" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="Mob3_Gif"/>
         </Grid>
+
+        <ProgressBar Height="20" VerticalAlignment="Bottom" Grid.Column="1" Name="Player_Health" ></ProgressBar>
+        <ProgressBar Height="40" VerticalAlignment="Top" Grid.Column="1" Name="ActionTime" />
+        <StackPanel Height="40" Margin="0 40 0 0" VerticalAlignment="Top" Grid.Column="1" Name="ComboPress" ></StackPanel>
         
-        <ProgressBar Height="20" VerticalAlignment="Bottom" Grid.Column="1" ></ProgressBar>
-        <Rectangle HorizontalAlignment="Left" Width="140" Fill="White" ></Rectangle>
+        <Grid HorizontalAlignment="Left" Width="140" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <ProgressBar Grid.Row="1" Grid.Column="1" Name="Mob1_Health">
+                <ProgressBar.LayoutTransform>
+                    <RotateTransform Angle="-90" />
+                </ProgressBar.LayoutTransform>
+            </ProgressBar>
+            <ProgressBar Grid.Row="2" Grid.Column="1" Name="Mob2_Health">
+                <ProgressBar.LayoutTransform>
+                    <RotateTransform Angle="-90" />
+                </ProgressBar.LayoutTransform>
+            </ProgressBar>
+            <ProgressBar Grid.Row="3" Grid.Column="1" Name="Mob3_Health">
+                <ProgressBar.LayoutTransform>
+                    <RotateTransform Angle="-90" />
+                </ProgressBar.LayoutTransform>
+            </ProgressBar>
+            <Image Grid.Row="1" Grid.Column="0"  Name="Mob1_IMG"/>
+            <Image Grid.Row="2" Grid.Column="0"  Name="Mob2_IMG"/>
+            <Image Grid.Row="3" Grid.Column="0"  Name="Mob3_IMG"/>
+        </Grid>
     </Grid>
 
 
