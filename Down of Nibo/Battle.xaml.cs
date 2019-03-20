@@ -26,10 +26,14 @@ namespace Down_of_Nibo
         List<ProgressBar> MobHealth = new List<ProgressBar>(); // try to bind later
         List<Image> MobGif = new List<Image>();
         List<Image> MobImage = new List<Image>();
+        List<int> ComboClip = new List<int>();
+        int KeyDownSelect = 50;
+        int KeyDownCombo = 50;
         public Battle()
         {
             InitializeComponent();
-            DispatcherTimer timer = new DispatcherTimer();
+            
+            DispatcherTimer timer = new DispatcherTimer(); //když je myš na okně čas se seká
             timer.Interval = TimeSpan.FromMilliseconds(1);
             timer.Tick += timer_Tick;
             timer.Start();
@@ -136,9 +140,143 @@ namespace Down_of_Nibo
                 playerAttacVisual();
             }
             ActionTime.Value++;
+            PrintComboClip();
             tests.Content = ActionTime.Value + "/" + ActionTime.Maximum; //debug
+            if (((Keyboard.IsKeyDown(Key.A) || Keyboard.IsKeyDown(Key.W) || Keyboard.IsKeyDown(Key.S) || Keyboard.IsKeyDown(Key.D)) && KeyDownCombo > 5) || ((Keyboard.IsKeyDown(Key.Up) || Keyboard.IsKeyDown(Key.Down)) && KeyDownSelect>10))
+            {
+                KeyPressHandle();
+            }
+            else
+            {
+                if (KeyDownSelect <= 10)
+                {
+                    KeyDownSelect++;
+                }
+                if(KeyDownCombo <= 5)
+                {
+                    KeyDownCombo++;
+                }
+                
+                
+            }
+
+
+        }
+        public void KeyPressHandle()
+        {
             
-            
+            if (Keyboard.IsKeyDown(Key.Up))
+            {
+                int selected = GetSelectedMob();
+                if (selected == 1)
+                {
+                    System.Windows.Controls.Grid.SetRow(SelectedMob, 1);
+                    
+                }
+                else if (selected == 2){
+                    System.Windows.Controls.Grid.SetRow(SelectedMob, 3);
+                }
+                KeyDownSelect = 0;
+                
+            }
+            else if(Keyboard.IsKeyDown(Key.Down))
+            {
+                int selected = GetSelectedMob();
+                if (selected == 0)
+                {
+                    System.Windows.Controls.Grid.SetRow(SelectedMob, 3);
+                }
+                else if (selected == 1)
+                {
+                    System.Windows.Controls.Grid.SetRow(SelectedMob, 5);
+                }
+                KeyDownSelect = 0;
+            }
+            else if (Keyboard.IsKeyDown(Key.A))
+            {
+                ComboClip.Add(0);
+                KeyDownCombo = 0;
+            }
+            else if (Keyboard.IsKeyDown(Key.W))
+            {
+                ComboClip.Add(1);
+                KeyDownCombo = 0;
+            }
+            else if (Keyboard.IsKeyDown(Key.S))
+            {
+                ComboClip.Add(2);
+                KeyDownCombo = 0;
+            }
+            else if (Keyboard.IsKeyDown(Key.D))
+            {
+                ComboClip.Add(3);
+                KeyDownCombo = 0;
+            }
+
+        }
+        public void ExecuteComboClip()
+        {
+
+            Combo ComboToUse = new Combo();
+            foreach(Combo ComboCodes in Globals.leaarndCombos)
+            {
+                if (ComboClip.SequenceEqual(ComboCodes.ComboCode))
+                {
+                    ComboToUse = ComboCodes;
+                }
+            }
+
+            if(ComboToUse is null)
+            {
+                return;
+            }
+
+            //get target
+            int SelectedMob = GetSelectedMob();
+            Mob Target;
+            if (Globals.Mobs[SelectedMob] is null)
+            {
+                Target = Globals.Mobs[SelectedMob];
+            }
+            else if(Globals.Mobs[0] is null)
+            {
+                Target = Globals.Mobs[0];
+            }
+            else if (Globals.Mobs[1] is null)
+            {
+                Target = Globals.Mobs[1];
+            }
+            else 
+            {
+                Target = Globals.Mobs[2];
+            }
+
+            //edit efects, add effects to give dmg and stuff
+
+
+
+        }
+        public void PrintComboClip()
+        {
+            ComboPress.Content = "";
+            foreach(int KeyCode in ComboClip)
+            {
+                if(KeyCode == 0)
+                {
+                    ComboPress.Content += " A";
+                }else if (KeyCode == 1)
+                {
+                    ComboPress.Content += " W";
+                }
+                else if (KeyCode == 2)
+                {
+                    ComboPress.Content += " S";
+                }
+                else if (KeyCode == 3)
+                {
+                    ComboPress.Content += " D";
+                }
+            }
         }
         public int MobAttacValue()
         {
@@ -249,9 +387,20 @@ namespace Down_of_Nibo
             }
         }
 
-        private void Grid_KeyDown(object sender, KeyEventArgs e)
+        
+        public int GetSelectedMob()
         {
-            //doo keypress
+            if(System.Windows.Controls.Grid.GetRow(SelectedMob) == 1)
+            {
+                return 0;
+            }else if(System.Windows.Controls.Grid.GetRow(SelectedMob) == 3)
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
         }
         private void AnimationCompleted(object sender, System.EventArgs e)
         {
@@ -294,5 +443,7 @@ namespace Down_of_Nibo
 
 
         }
+
+        
     }
 }

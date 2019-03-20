@@ -160,8 +160,8 @@
     <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Nightmare-Files\GIFS\nightmare-galloping.gif" />
     <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Nightmare-Files\GIFS\nightmare-idle.gif" />
     <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\public-license.txt" />
-    <Resource Include="Assets\sprites\sold\ezgif-2-378d90375bea_idle.gif" />
-    <Resource Include="Assets\sprites\sold\ezgif-2-80513fdbb809_Attac.gif" />
+    <Resource Include="Assets\sprites\sold\Idle.gif" />
+    <Resource Include="Assets\sprites\sold\Attack.gif" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Img\GrassLands.png" />

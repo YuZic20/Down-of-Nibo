@@ -8,7 +8,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Battle">
-    <Grid KeyDown="Grid_KeyDown">
+    <Grid>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="140" />
@@ -37,9 +37,9 @@
 
         <ProgressBar Height="20" VerticalAlignment="Bottom" Grid.Column="1" Name="Player_Health" ></ProgressBar>
         <ProgressBar Height="40" VerticalAlignment="Top" Grid.Column="1" Name="ActionTime" />
-        <StackPanel Height="40" Margin="0 40 0 0" VerticalAlignment="Top" Grid.Column="1" Name="ComboPress" ></StackPanel>
+        <Label Height="40" Margin="0 40 0 0" VerticalAlignment="Top" Grid.Column="1"  FontSize="30"  Name="ComboPress" ></Label>
         
-        <Grid HorizontalAlignment="Left" Width="140" Background="White">
+        <Grid HorizontalAlignment="Left" Width="140" Background="White" Name="LeftGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="10*" />
                 <RowDefinition Height="20*" />
@@ -72,6 +72,11 @@
             <Image Grid.Row="3" Grid.Column="0"  Name="Mob2_IMG"/>
             <Image Grid.Row="5" Grid.Column="0"  Name="Mob3_IMG"/>
             <Label Name="tests"></Label>
+            <Label Name="tests2"></Label>
+            <Border  Grid.Row="1" Grid.Column="0" BorderThickness="3" BorderBrush="Black" Name="SelectedMob">
+                <Rectangle Fill="Red" Opacity="0.5" ></Rectangle>
+            </Border>
+            
         </Grid>
     </Grid>
 

@@ -12,6 +12,7 @@ namespace Down_of_Nibo
         public string Name { get; set; }
         public string Description { get; set; }
         public List<int> ComboCode { get; set; } = new List<int>();
+        public List<Effect_Duration> Effects { get; set; } = new List<Effect_Duration>();
         Random rand = new Random();
 
 
