@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using WpfAnimatedGif;
 using System.Windows.Threading;
 using System.Windows.Media.Animation;
+using ClassLibrary2;
 
 namespace Down_of_Nibo
 {
@@ -39,6 +40,18 @@ namespace Down_of_Nibo
             timer.Start();
             GenerateBattle();
             GetTimerSpeed();
+            Combo combo = new Combo();
+            combo.ComboCode.Add(1);
+            combo.ComboCode.Add(1);
+            combo.ComboCode.Add(1);
+            combo.ComboCode.Add(1);
+            Effect_Duration effect = new Effect_Duration();
+            effect.Duration = 2;
+            effect.FixedStats.HP = 10;
+            effect.MStats.HP = 0;
+            combo.Effects.Add(effect);
+
+            Globals.leaarndCombos.Add(combo);
         }
         public void GenerateBattle()
         {
@@ -135,9 +148,12 @@ namespace Down_of_Nibo
             if (ActionTime.Value >= ActionTime.Maximum)
             {
                 ActionTime.Value = 0; // new round
+                ExecuteComboClip();
+                MobGetHit();
                 Globals.Player = AiAttacs(Globals.Player, MobAttacValue());
                 UpdateHpBar();
                 playerAttacVisual();
+                
             }
             ActionTime.Value++;
             PrintComboClip();
@@ -226,23 +242,24 @@ namespace Down_of_Nibo
                 }
             }
 
-            if(ComboToUse is null)
+            if(ComboToUse.ComboCode.Count() == 0)
             {
+                ComboClip.Clear();
                 return;
             }
 
             //get target
             int SelectedMob = GetSelectedMob();
             Mob Target;
-            if (Globals.Mobs[SelectedMob] is null)
+            if (Globals.Mobs[SelectedMob] is null == false)
             {
                 Target = Globals.Mobs[SelectedMob];
             }
-            else if(Globals.Mobs[0] is null)
+            else if(Globals.Mobs[0] is null == false)
             {
                 Target = Globals.Mobs[0];
             }
-            else if (Globals.Mobs[1] is null)
+            else if (Globals.Mobs[1] is null == false)
             {
                 Target = Globals.Mobs[1];
             }
@@ -252,9 +269,26 @@ namespace Down_of_Nibo
             }
 
             //edit efects, add effects to give dmg and stuff
+            Target.efects.AddRange(ComboToUse.Effects);
+
+            ComboClip.Clear();
 
 
+        }
+        public void MobGetHit()
+        {
+            foreach (Mob mob in Globals.Mobs)
+            {
+                if(mob is null)
+                {
 
+                }
+                else
+                {
+                    mob.OneRound();
+                }
+                
+            }
         }
         public void PrintComboClip()
         {
@@ -290,6 +324,7 @@ namespace Down_of_Nibo
                 else
                 {
                     attac = Globals.Mobs[i].GetFullStats(Globals.Mobs[i]).Dmg + attac;
+                    
                 }
             }
             return attac;
@@ -317,6 +352,9 @@ namespace Down_of_Nibo
                 Player.Stats.HP = Player.Stats.HP + givendimg;
             }
             MobAttacVisual();
+
+            
+
             return Player;
         }
         public void MobAttacVisual()

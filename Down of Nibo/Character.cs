@@ -152,6 +152,14 @@ namespace Down_of_Nibo
             }
             return returnList;
         }
+        public void EffectToAttac()
+        {
+            foreach (Effect_Duration efect in efects)
+            {
+                Stats.HP = Stats.HP - efect.FixedStats.HP;
+                Stats.HP = Stats.HP - (efect.MStats.HP * Stats.HP);
+            }
+        }
 
     }
 }
