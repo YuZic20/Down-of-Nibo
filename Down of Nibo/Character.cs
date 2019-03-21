@@ -13,7 +13,7 @@ namespace Down_of_Nibo
         public Inventory Inventory { get; set; } = new Inventory();
         public Stats Stats { get; set; } = new Stats();
         public Eqiped Eqiped { get; set; } = new Eqiped();
-        public List<AEffect> efects { get; set; } = new List<AEffect>();
+        public List<Effect_Duration> efects { get; set; } = new List<Effect_Duration>();
         public string GifPath_Idle { get; set; } = @"Assets\sprites\main\idle.gif";
         public string GifPath_Attac { get; set; } = @"Assets\sprites\main\Attack.gif";
 
@@ -152,13 +152,45 @@ namespace Down_of_Nibo
             }
             return returnList;
         }
-        public void EffectToAttac()
+        
+        public int EffectToAttac()
         {
+            int Attac = 0;
             foreach (Effect_Duration efect in efects)
             {
-                Stats.HP = Stats.HP - efect.FixedStats.HP;
-                Stats.HP = Stats.HP - (efect.MStats.HP * Stats.HP);
+                Attac = Attac + efect.FixedStats.HP;
+                Attac = Attac + (efect.MStats.HP * Stats.HP);
             }
+            return Attac;
+        }
+        public void OneRound()
+        {
+            int def = GetFullStats(this).Def;
+
+            int givendimg = EffectToAttac();
+
+            Random rand = new Random();
+            int CritChance = rand.Next(100);
+            if (CritChance < 15)
+            {
+                givendimg = def - givendimg * 2;
+            }
+            else if (CritChance > 75)
+            {
+                givendimg = def - givendimg / 2;
+            }
+            else
+            {
+                givendimg = def - givendimg;
+            }
+
+            if (givendimg < 0)
+            {
+                Stats.HP = Stats.HP + givendimg;
+            }
+            efects = ExpireConsumibles(efects, 1);
+            efects = CheckExpirationOfConsumibles(this.efects);
+
         }
 
     }

@@ -179,5 +179,8 @@
   <ItemGroup>
     <Resource Include="Assets\sprites\HBandit\bandit_img.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\Ghoast.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

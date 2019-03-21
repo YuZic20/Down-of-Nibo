@@ -40,6 +40,8 @@ namespace Down_of_Nibo
             timer.Start();
             GenerateBattle();
             GetTimerSpeed();
+
+            /*
             Combo combo = new Combo();
             combo.ComboCode.Add(1);
             combo.ComboCode.Add(1);
@@ -47,11 +49,13 @@ namespace Down_of_Nibo
             combo.ComboCode.Add(1);
             Effect_Duration effect = new Effect_Duration();
             effect.Duration = 2;
-            effect.FixedStats.HP = 10;
+            effect.FixedStats.HP = 1000;
             effect.MStats.HP = 0;
             combo.Effects.Add(effect);
+            Globals.Player.Stats.Def = 5;
 
             Globals.leaarndCombos.Add(combo);
+            */
         }
         public void GenerateBattle()
         {
@@ -149,16 +153,30 @@ namespace Down_of_Nibo
             {
                 ActionTime.Value = 0; // new round
                 ExecuteComboClip();
-                MobGetHit();
+                MobEffectRound();
+                PlayerEffectRound();
                 Globals.Player = AiAttacs(Globals.Player, MobAttacValue());
                 UpdateHpBar();
-                playerAttacVisual();
+                RemoveDeadMobs();
+                if (isPlayerDead())
+                {
+                    //game Over
+                    int a = 5;
+                }
+                else if (AreMobsDead())
+                {
+                    //ecunter won
+                    int a = 5;
+                }
                 
+                playerAttacVisual();
+                MobAttacVisual();
+
             }
             ActionTime.Value++;
             PrintComboClip();
             tests.Content = ActionTime.Value + "/" + ActionTime.Maximum; //debug
-            if (((Keyboard.IsKeyDown(Key.A) || Keyboard.IsKeyDown(Key.W) || Keyboard.IsKeyDown(Key.S) || Keyboard.IsKeyDown(Key.D)) && KeyDownCombo > 5) || ((Keyboard.IsKeyDown(Key.Up) || Keyboard.IsKeyDown(Key.Down)) && KeyDownSelect>10))
+            if (((Keyboard.IsKeyDown(Key.A) || Keyboard.IsKeyDown(Key.W) || Keyboard.IsKeyDown(Key.Space) || Keyboard.IsKeyDown(Key.S) || Keyboard.IsKeyDown(Key.D)) && KeyDownCombo > 5) || ((Keyboard.IsKeyDown(Key.Up) || Keyboard.IsKeyDown(Key.Down)) && KeyDownSelect>10))
             {
                 KeyPressHandle();
             }
@@ -228,12 +246,27 @@ namespace Down_of_Nibo
                 ComboClip.Add(3);
                 KeyDownCombo = 0;
             }
+            else if (Keyboard.IsKeyDown(Key.Space))
+            {
+                ComboClip.Add(-1);
+                KeyDownCombo = 0;
+            }
 
         }
         public void ExecuteComboClip()
         {
+            if(ComboClip.Count() == 0)
+            {
+                return;
+            }
 
             Combo ComboToUse = new Combo();
+            bool OnSelf = false;
+            if(ComboClip.Last() == -1)
+            {
+                OnSelf = true;
+                ComboClip.RemoveAt(ComboClip.Count()-1);
+            }
             foreach(Combo ComboCodes in Globals.leaarndCombos)
             {
                 if (ComboClip.SequenceEqual(ComboCodes.ComboCode))
@@ -248,34 +281,42 @@ namespace Down_of_Nibo
                 return;
             }
 
-            //get target
-            int SelectedMob = GetSelectedMob();
-            Mob Target;
-            if (Globals.Mobs[SelectedMob] is null == false)
+            if (OnSelf)
             {
-                Target = Globals.Mobs[SelectedMob];
+                Globals.Player.efects.AddRange(ComboToUse.Effects);
             }
-            else if(Globals.Mobs[0] is null == false)
+            else
             {
-                Target = Globals.Mobs[0];
-            }
-            else if (Globals.Mobs[1] is null == false)
-            {
-                Target = Globals.Mobs[1];
-            }
-            else 
-            {
-                Target = Globals.Mobs[2];
-            }
+                //get target
+                int SelectedMob = GetSelectedMob();
+                Mob Target;
+                if (Globals.Mobs[SelectedMob] is null == false)
+                {
+                    Target = Globals.Mobs[SelectedMob];
+                }
+                else if (Globals.Mobs[0] is null == false)
+                {
+                    Target = Globals.Mobs[0];
+                }
+                else if (Globals.Mobs[1] is null == false)
+                {
+                    Target = Globals.Mobs[1];
+                }
+                else
+                {
+                    Target = Globals.Mobs[2];
+                }
 
-            //edit efects, add effects to give dmg and stuff
-            Target.efects.AddRange(ComboToUse.Effects);
+                //edit efects, add effects to give dmg and stuff
+                Target.efects.AddRange(ComboToUse.Effects);
+            }
+            
 
             ComboClip.Clear();
 
 
         }
-        public void MobGetHit()
+        public void MobEffectRound()
         {
             foreach (Mob mob in Globals.Mobs)
             {
@@ -287,6 +328,66 @@ namespace Down_of_Nibo
                 {
                     mob.OneRound();
                 }
+                
+            }
+        }
+        public void PlayerEffectRound()
+        {
+            Globals.Player.OneRound();
+        }
+        public bool AreMobsDead()
+        {
+            int strike = 0;
+            for (int i = 0; i < 3; i++)
+            {
+
+                if (Globals.Mobs[i] is null)
+                {
+                    strike++;
+                }
+            }
+            if (strike == 3)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool isPlayerDead()
+        {
+            if(Globals.Player.Stats.HP <= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void RemoveDeadMobs()
+        {
+            for(int i = 0; i < 3; i++)
+            {
+                
+                if (Globals.Mobs[i] is null)
+                {
+
+                }
+                else
+                {
+                    if (Globals.Mobs[i].Stats.HP <= 0)
+                    {
+                        Globals.Mobs[i] = null;
+                        var image = new BitmapImage();
+                        image.BeginInit();
+                        image.UriSource = new Uri(@"Assets\sprites\Ghoast.gif", UriKind.Relative);
+                        image.EndInit();
+                        ImageBehavior.SetAnimatedSource(MobGif[i], image);
+                    }
+                }
+
                 
             }
         }
@@ -309,6 +410,10 @@ namespace Down_of_Nibo
                 else if (KeyCode == 3)
                 {
                     ComboPress.Content += " D";
+                }
+                else if(KeyCode == -1)
+                {
+                    ComboPress.Content += " Cast On Self";
                 }
             }
         }
@@ -351,7 +456,7 @@ namespace Down_of_Nibo
             {
                 Player.Stats.HP = Player.Stats.HP + givendimg;
             }
-            MobAttacVisual();
+            
 
             
 
