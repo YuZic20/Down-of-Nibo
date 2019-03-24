@@ -169,7 +169,7 @@ namespace Down_of_Nibo
                     //ecunter won
                     int a = 5;
                 }
-                
+                GetTimerSpeed();
                 playerAttacVisual();
                 MobAttacVisual();
 

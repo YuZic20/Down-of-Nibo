@@ -37,7 +37,7 @@
 
         <ProgressBar Height="20" VerticalAlignment="Bottom" Grid.Column="1" Name="Player_Health" ></ProgressBar>
         <ProgressBar Height="40" VerticalAlignment="Top" Grid.Column="1" Name="ActionTime" />
-        <Label Height="40" Margin="0 40 0 0" VerticalAlignment="Top" Grid.Column="1"  FontSize="30"  Name="ComboPress" ></Label>
+        <Label Height="50" Margin="0 40 0 0" VerticalAlignment="Top" Grid.Column="1"  FontSize="30"  Name="ComboPress" ></Label>
         
         <Grid HorizontalAlignment="Left" Width="140" Background="White" Name="LeftGrid">
             <Grid.RowDefinitions>

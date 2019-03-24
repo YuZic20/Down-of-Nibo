@@ -29,6 +29,14 @@ namespace Down_of_Nibo
 
             return NewStats;
         }
+        public void AddStats(Stats StatsToAdd)
+        {
+            Stats.Def = Stats.Def + StatsToAdd.Def;
+            Stats.speed = Stats.speed + StatsToAdd.speed;
+            Stats.str = Stats.str + StatsToAdd.str;
+            Stats.Dmg = Stats.Dmg + StatsToAdd.Dmg;
+            Stats.dex = Stats.dex + StatsToAdd.dex;
+        }
         public Stats GetFullStats(Character character)
         {
             //basic stats

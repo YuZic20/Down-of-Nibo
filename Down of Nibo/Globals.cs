@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,7 @@ namespace Down_of_Nibo
         public static Character Player { get; set; } = new Character();
         public static Mob[] Mobs { get; set; } = new Mob[3];
         public static List<RegionMap> regionMaps { get; set; } = new List<RegionMap>();
+        public static Stats Traing { get; set; }
+        //add curent fraim
     }
 }

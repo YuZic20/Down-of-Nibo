@@ -25,7 +25,8 @@ namespace Down_of_Nibo
         {
             InitializeComponent();
             Battle battle = new Battle();
-            MainWindowFrame.Content = battle;
+            Train Training = new Train();
+            MainWindowFrame.Content = Training;
         }
     }
 }
