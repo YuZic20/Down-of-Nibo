@@ -41,7 +41,7 @@ namespace Down_of_Nibo
             GenerateBattle();
             GetTimerSpeed();
 
-            /*
+            /* test combo
             Combo combo = new Combo();
             combo.ComboCode.Add(1);
             combo.ComboCode.Add(1);
@@ -49,7 +49,8 @@ namespace Down_of_Nibo
             combo.ComboCode.Add(1);
             Effect_Duration effect = new Effect_Duration();
             effect.Duration = 2;
-            effect.FixedStats.HP = 1000;
+            effect.Name = "ufff";
+            effect.FixedStats.HP = 20;
             effect.MStats.HP = 0;
             combo.Effects.Add(effect);
             Globals.Player.Stats.Def = 5;
@@ -428,7 +429,7 @@ namespace Down_of_Nibo
                 }
                 else
                 {
-                    attac = Globals.Mobs[i].GetFullStats(Globals.Mobs[i]).Dmg + attac;
+                    attac = Globals.Mobs[i].GetFullStats(Globals.Mobs[i]).Dmg + attac; 
                     
                 }
             }

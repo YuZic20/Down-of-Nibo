@@ -66,8 +66,12 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Mob.cs" />
+    <Compile Include="Quest.cs" />
     <Compile Include="RegionMap.xaml.cs">
       <DependentUpon>RegionMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Train.xaml.cs">
+      <DependentUpon>Train.xaml</DependentUpon>
     </Compile>
     <Compile Include="World.cs" />
     <Page Include="Battle.xaml">
@@ -88,6 +92,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="RegionMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Train.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
