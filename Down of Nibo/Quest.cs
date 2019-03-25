@@ -7,17 +7,18 @@ using System.Threading.Tasks;
 
 namespace Down_of_Nibo
 {
-    class Quest
+    public class Quest
     {
-        public int decription { get; set; }
+        public string decription { get; set; }
         public  Mob[] Mobs { get; set; } = new Mob[3];
         public Item Reward { get; set; }
 
 
         public void StartBattle()
         {
+            
             Mobs.CopyTo(Globals.Mobs,0);
-            //start battle
+            
         }
     }
 }

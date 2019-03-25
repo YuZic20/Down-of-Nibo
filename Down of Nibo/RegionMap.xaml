@@ -9,7 +9,52 @@
       Title="RegionMap">
 
     <Grid Name="Buttons">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Click="Return_Button_Click">return</Button>
+            <Button Grid.Row="4" Grid.Column="6" Click="Button_Click_Action">Qest</Button>
+        </Grid>
+        <Grid Width="500" Height="300" Background="White" Visibility="Hidden" Name="QestInfo">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
 
+            <TextBlock Grid.Row="1" Name="Descripion" TextWrapping="WrapWithOverflow" >asdfasdf asdf asdf adsfasdkjlfas bfaksjdjfaskjdjfa bsdkfjasdfkljabsdl kfabjsdlkfjbasdlkfj basdlkfjabsdlkfjbaslkjdfba sdlkfjb askljdbfaklsdbjfalskjjdbf alskjdbf aklsjdbfaskljdfb alskjdjfb alskdbfj alskdfbja lskdbf laksdbf lkajsdfb alksdbf alks</TextBlock>
+            <Label Name="Reward" Grid.Row="2">Reward: Lether Boots</Label>
+            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Width="100" Click="Button_Click_Accept"> Acept </Button>
+                <Button Margin="20 0 0 0" Width="100" Click="Button_Click_Reject"> Reject </Button>
+            </StackPanel>
+
+        </Grid>
         
     </Grid>
+    
 </Page>

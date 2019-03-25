@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:Down_of_Nibo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
-        <Frame Name="MainWindowFrame">
+
+        <Frame Name="MainWindowFrame" NavigationUIVisibility="Hidden">
             
         </Frame>
         

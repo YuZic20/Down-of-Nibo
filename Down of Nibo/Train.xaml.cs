@@ -101,7 +101,7 @@ namespace Down_of_Nibo
             else
             {
                 
-                if (KeyDownCombo <= 5)
+                if (KeyDownCombo <= 20)
                 {
                     KeyDownCombo++;
                 }
@@ -228,6 +228,7 @@ namespace Down_of_Nibo
         }
         public void Results()
         {
+            
             Globals.Traing.Def = Globals.Traing.Def * (Lvl/2);
             Globals.Traing.dex = Globals.Traing.dex * (Lvl / 2);
             Globals.Traing.speed = Globals.Traing.speed * (Lvl / 2);
@@ -238,6 +239,8 @@ namespace Down_of_Nibo
             Globals.Player.AddStats(Globals.Traing);
 
             Globals.Traing = new ClassLibrary2.Stats();
+
+            Globals.Scene = 3;
 
             //end here
         }

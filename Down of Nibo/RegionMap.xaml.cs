@@ -24,6 +24,8 @@ namespace Down_of_Nibo
         public RegionMap()
         {
             InitializeComponent();
+            
+
         }
         public void AddButton(Button button)
         {
@@ -36,7 +38,54 @@ namespace Down_of_Nibo
 
         private void Button_Click_Action(object sender, RoutedEventArgs e)
         {
-            //aktivace qestů
+
+            string RewardName;
+            if(Globals.Quests[Globals.Scene][0].Reward is null)
+            {
+                RewardName = "Cvičení";
+            }
+            else
+            {
+                RewardName = Globals.Quests[Globals.Scene][0].Reward.Name;
+            }
+            
+            Descripion.Text = Globals.Quests[Globals.Scene][0].decription;
+            Reward.Content = "Odměna: " + RewardName;
+            QestInfo.Visibility = Visibility.Visible;
+        }
+
+        
+
+        private void Return_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            Globals.Scene = 3;
+        }
+
+        private void Button_Click_Accept(object sender, RoutedEventArgs e)
+        {
+            if (Globals.Quests[Globals.Scene][0].Reward is null)
+            {
+                if (Globals.Scene == 0) { Globals.Traing.Def = 10; } else { Globals.Traing.Def = 0; }
+                Globals.Traing.dex = 0;
+                if (Globals.Scene == 1) { Globals.Traing.speed = 10; } else { Globals.Traing.speed = 0; }
+                Globals.Traing.HP = 0;
+                if (Globals.Scene == 1) { Globals.Traing.Dmg = 10; } else { Globals.Traing.Dmg = 0; }
+                Globals.Traing.str = 0;
+
+                Globals.Scene = 6;
+            }
+            else
+            {
+                Globals.Quests[Globals.Scene][0].StartBattle();
+                Globals.Player.Inventory.items.Add(Globals.Quests[Globals.Scene][0].Reward);
+                Globals.Quests[Globals.Scene].RemoveAt(0);
+                Globals.Scene = 5;
+            }
+        }
+        private void Button_Click_Reject(object sender, RoutedEventArgs e)
+        {
+            QestInfo.Visibility = Visibility.Hidden;
         }
     }
 }

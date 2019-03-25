@@ -9,6 +9,6 @@ namespace Down_of_Nibo
 {
     public class Inventory
     {
-        public List<Item> items { get; set; }
+        public List<Item> items { get; set; } = new List<Item>();
     }
 }

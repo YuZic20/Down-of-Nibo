@@ -60,10 +60,8 @@ namespace Down_of_Nibo
         }
         public void GenerateBattle()
         {
-        
-            Globals.Mobs[0] = new Mob();
             
-            Globals.Mobs[2] = new Mob();
+            
         
             
            
@@ -78,7 +76,7 @@ namespace Down_of_Nibo
             MobImage.Add(Mob1_IMG);
             MobImage.Add(Mob2_IMG);
             MobImage.Add(Mob3_IMG);
-
+            
 
             
 

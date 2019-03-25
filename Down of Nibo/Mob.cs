@@ -12,8 +12,8 @@ namespace Down_of_Nibo
         public string Name { get; set; }
         public Stats Stats { get; set; } = new Stats();
         public List<Effect_Duration> efects { get; set; } = new List<Effect_Duration>();
-        public string GifPath_Idle { get; set; } = @"Assets\sprites\HBandit\idle.gif";
-        public string GifPath_Attac { get; set; } = @"Assets\sprites\HBandit\Attack.gif";
+        public string GifPath_Idle { get; set; } = @"Assets\sprites\LBandit\idle.gif";
+        public string GifPath_Attac { get; set; } = @"Assets\sprites\LBandit\Attack.gif";
         public string ImgPath { get; set; } = @"Assets\sprites\HBandit\bandit_img.jpg";
 
         public Stats GetFullStats(Mob character)

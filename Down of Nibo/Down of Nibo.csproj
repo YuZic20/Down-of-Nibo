@@ -74,6 +74,9 @@
       <DependentUpon>Train.xaml</DependentUpon>
     </Compile>
     <Compile Include="World.cs" />
+    <Compile Include="WorldMap.xaml.cs">
+      <DependentUpon>WorldMap.xaml</DependentUpon>
+    </Compile>
     <Page Include="Battle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -96,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Train.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorldMap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -189,6 +196,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\sprites\Ghoast.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Img\Watterfall.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

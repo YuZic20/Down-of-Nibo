@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClassLibrary2;
 
 namespace Down_of_Nibo
 {
@@ -26,7 +27,28 @@ namespace Down_of_Nibo
             InitializeComponent();
             Battle battle = new Battle();
             Train Training = new Train();
-            MainWindowFrame.Content = Training;
+
+            
+
+            List<Quest> quests = new List<Quest>();
+            Globals.Quests[0] = quests;
+
+            Quest quest = new Quest();
+            quest.decription = "kill em alll";
+
+            Mob mob = new Mob();
+            mob.Stats.Dmg = 5;
+            quest.Mobs[1] = mob;
+
+            Item item = new Item();
+            quest.Reward = item;
+
+            Globals.Quests[0].Add(quest);
+                
+
+
+            Globals.Scene = 0;
+            //MainWindowFrame.Content = Training;
         }
     }
 }
