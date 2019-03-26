@@ -160,12 +160,12 @@ namespace Down_of_Nibo
                 if (isPlayerDead())
                 {
                     //game Over
-                    int a = 5;
+                    ContentCreator.MCDied();
                 }
                 else if (AreMobsDead())
                 {
                     //ecunter won
-                    int a = 5;
+                    Globals.Scene = 3;
                 }
                 GetTimerSpeed();
                 playerAttacVisual();
@@ -266,7 +266,7 @@ namespace Down_of_Nibo
                 OnSelf = true;
                 ComboClip.RemoveAt(ComboClip.Count()-1);
             }
-            foreach(Combo ComboCodes in Globals.leaarndCombos)
+            foreach(Combo ComboCodes in Globals.learndCombos)
             {
                 if (ComboClip.SequenceEqual(ComboCodes.ComboCode))
                 {
@@ -454,10 +454,7 @@ namespace Down_of_Nibo
             if (givendimg < 0)
             {
                 Player.Stats.HP = Player.Stats.HP + givendimg;
-            }
-            
-
-            
+            }            
 
             return Player;
         }

@@ -21,34 +21,17 @@ namespace Down_of_Nibo
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int cislo { get; set; } = 5;
+
         public MainWindow()
         {
             InitializeComponent();
-            Battle battle = new Battle();
-            Train Training = new Train();
 
+            ContentCreator.GenerateMaps();
+            ContentCreator.GenerateContent();                
+
+
+            Globals.Scene = 3;
             
-
-            List<Quest> quests = new List<Quest>();
-            Globals.Quests[0] = quests;
-
-            Quest quest = new Quest();
-            quest.decription = "kill em alll";
-
-            Mob mob = new Mob();
-            mob.Stats.Dmg = 5;
-            quest.Mobs[1] = mob;
-
-            Item item = new Item();
-            quest.Reward = item;
-
-            Globals.Quests[0].Add(quest);
-                
-
-
-            Globals.Scene = 0;
-            //MainWindowFrame.Content = Training;
         }
     }
 }

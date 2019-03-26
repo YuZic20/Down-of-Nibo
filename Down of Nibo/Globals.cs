@@ -10,13 +10,13 @@ namespace Down_of_Nibo
 {
     public static class Globals
     {
-        public static List<Combo> leaarndCombos = new List<Combo>();
+        public static List<Combo> learndCombos = new List<Combo>();
         public static int Turns { get; set; } = 100;
         public static Character Player { get; set; } = new Character();
         public static Mob[] Mobs { get; set; } = new Mob[3];
         public static RegionMap[] regionMaps { get; set; } = new RegionMap[3];
         public static List<Quest>[] Quests { get; set; } = new List<Quest>[3];
-        public static Stats Traing { get; set; } = new Stats();
+        public static Stats Training { get; set; } = new Stats();
 
         static int scene;
         public static int Scene
@@ -34,6 +34,7 @@ namespace Down_of_Nibo
 
         private static void CallMe()
         {
+            
             /*
                 0 region Map 0
                 1 region Map 1
@@ -48,7 +49,7 @@ namespace Down_of_Nibo
 
             if (scene == 0)
             {
-                regionMaps[0] = new RegionMap();
+                
                 ExistingInstanceOfMainWindow.MainWindowFrame.Content = regionMaps[0];
             }
             else if (scene == 1)

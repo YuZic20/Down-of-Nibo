@@ -9,6 +9,7 @@
       Title="RegionMap">
 
     <Grid Name="Buttons">
+        <Image Name="RegionMapImage"></Image>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
@@ -54,7 +55,24 @@
             </StackPanel>
 
         </Grid>
-        
+        <Grid Width="500" Height="300" Background="White" Visibility="Hidden" Name="ComboInfo">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+                
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Width="50" HorizontalAlignment="Right" Click="Button_Click_ComboClose">X</Button>
+            <Label Grid.Row="0" Name="ComboName" >Combo: Slash</Label>
+            <TextBlock Grid.Row="1" Name="ComboDescripion" TextWrapping="WrapWithOverflow">Sekne mečem</TextBlock>
+            <Label Grid.Row="2">Combo Kod:  W D R S A</Label>
+            
+
+            
+
+        </Grid>
+
     </Grid>
     
 </Page>

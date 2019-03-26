@@ -23,23 +23,23 @@ namespace Down_of_Nibo
             {
                 if (Character.Def > BaseStats.Def + 20 && Character.dex > BaseStats.dex + 20 && Character.Dmg > BaseStats.Dmg + 20 && Character.speed > BaseStats.speed + 20 && Character.str > BaseStats.str + 20) //easy
                 {
-                    CodeToReturn = GenerateCodeRND(BaseDifficlty, -(BaseDifficlty / 2), Globals.leaarndCombos);
+                    return GenerateCodeRND(BaseDifficlty, -(BaseDifficlty / 2), Globals.learndCombos);
                 }
                 else //normal
                 {
-                    CodeToReturn = GenerateCodeRND(BaseDifficlty, 0, Globals.leaarndCombos);
+                    return GenerateCodeRND(BaseDifficlty, 0, Globals.learndCombos);
                 }
             }
             else // hard
             {
-                CodeToReturn = GenerateCodeRND(BaseDifficlty, BaseDifficlty * 2, Globals.leaarndCombos);
+                return GenerateCodeRND(BaseDifficlty, BaseDifficlty * 2, Globals.learndCombos);
             }
-            return CodeToReturn;
+             
         }
         List<int> GenerateCodeRND(int BaseDifficlty,int LengthChanger, List<Combo> combos)
         {
             int lenght;
-            int Strike = 0;
+            
             List<int> ComboToReturn = new List<int>();
             //délka komba
             if(BaseDifficlty + LengthChanger >= 3) //3 = minimílní délka komba

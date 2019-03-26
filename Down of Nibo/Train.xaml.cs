@@ -229,16 +229,16 @@ namespace Down_of_Nibo
         public void Results()
         {
             
-            Globals.Traing.Def = Globals.Traing.Def * (Lvl/2);
-            Globals.Traing.dex = Globals.Traing.dex * (Lvl / 2);
-            Globals.Traing.speed = Globals.Traing.speed * (Lvl / 2);
-            Globals.Traing.HP = Globals.Traing.HP * (Lvl / 2);
-            Globals.Traing.Dmg = Globals.Traing.Dmg * (Lvl / 2);
-            Globals.Traing.str = Globals.Traing.str * (Lvl / 2);
+            Globals.Training.Def = Globals.Training.Def * (Lvl/2);
+            Globals.Training.dex = Globals.Training.dex * (Lvl / 2);
+            Globals.Training.speed = Globals.Training.speed * (Lvl / 2);
+            Globals.Training.HP = Globals.Training.HP * (Lvl / 2);
+            Globals.Training.Dmg = Globals.Training.Dmg * (Lvl / 2);
+            Globals.Training.str = Globals.Training.str * (Lvl / 2);
 
-            Globals.Player.AddStats(Globals.Traing);
+            Globals.Player.AddStats(Globals.Training);
 
-            Globals.Traing = new ClassLibrary2.Stats();
+            Globals.Training = new ClassLibrary2.Stats();
 
             Globals.Scene = 3;
 

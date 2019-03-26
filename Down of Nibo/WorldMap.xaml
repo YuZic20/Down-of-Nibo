@@ -9,6 +9,36 @@
       Title="WorldMap">
 
     <Grid>
-        
+        <Image Source="Assets\Img\fantasy_map.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="1000" Width="1000"></Image>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" >return</Button>
+            <Button Grid.Row="6" Grid.Column="6" Click="Button_Click">Země rychlosti</Button>
+            <Button Grid.Row="5" Grid.Column="3" Click="Button_Click_1">Země síly</Button>
+            <Button Grid.Row="3" Grid.Column="5" Click="Button_Click_2">Země Ochrany</Button>
+        </Grid>
     </Grid>
 </Page>

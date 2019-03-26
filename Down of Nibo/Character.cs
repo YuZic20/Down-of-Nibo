@@ -200,6 +200,13 @@ namespace Down_of_Nibo
             efects = CheckExpirationOfConsumibles(this.efects);
 
         }
+        public void died()
+        {
+            Stats = HalfTheStats(Stats);
+            Inventory = new Inventory();
+            Eqiped = new Eqiped();
+            efects = new List<Effect_Duration>();
+        }
 
     }
 }

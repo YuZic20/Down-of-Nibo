@@ -35,7 +35,7 @@
             <Image   RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Column="0" Grid.RowSpan="4" Height="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="Mob3_Gif" gif:ImageBehavior.AnimationCompleted="AnimationCompleted"/>
         </Grid>
 
-        <ProgressBar Height="20" VerticalAlignment="Bottom" Grid.Column="1" Name="Player_Health" ></ProgressBar>
+        <ProgressBar Height="20" Maximum="1000" VerticalAlignment="Bottom" Grid.Column="1" Name="Player_Health" ></ProgressBar>
         <ProgressBar Height="40" VerticalAlignment="Top" Grid.Column="1" Name="ActionTime" />
         <Label Height="50" Margin="0 40 0 0" VerticalAlignment="Top" Grid.Column="1"  FontSize="30"  Name="ComboPress" ></Label>
         
@@ -53,17 +53,17 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <ProgressBar Grid.Row="1" Grid.Column="1" Name="Mob1_Health">
+            <ProgressBar Grid.Row="1" Grid.Column="1" Name="Mob1_Health" Maximum="1000">
                 <ProgressBar.LayoutTransform>
                     <RotateTransform Angle="-90" />
                 </ProgressBar.LayoutTransform>
             </ProgressBar>
-            <ProgressBar Grid.Row="3" Grid.Column="1" Name="Mob2_Health">
+            <ProgressBar Grid.Row="3" Grid.Column="1" Name="Mob2_Health" Maximum="1000">
                 <ProgressBar.LayoutTransform>
                     <RotateTransform Angle="-90" />
                 </ProgressBar.LayoutTransform>
             </ProgressBar>
-            <ProgressBar Grid.Row="5" Grid.Column="1" Name="Mob3_Health">
+            <ProgressBar Grid.Row="5" Grid.Column="1" Name="Mob3_Health" Maximum="1000">
                 <ProgressBar.LayoutTransform>
                     <RotateTransform Angle="-90" />
                 </ProgressBar.LayoutTransform>

@@ -25,6 +25,8 @@ namespace Down_of_Nibo
         {
             InitializeComponent();
             
+            
+
 
         }
         public void AddButton(Button button)
@@ -66,14 +68,21 @@ namespace Down_of_Nibo
         {
             if (Globals.Quests[Globals.Scene][0].Reward is null)
             {
-                if (Globals.Scene == 0) { Globals.Traing.Def = 10; } else { Globals.Traing.Def = 0; }
-                Globals.Traing.dex = 0;
-                if (Globals.Scene == 1) { Globals.Traing.speed = 10; } else { Globals.Traing.speed = 0; }
-                Globals.Traing.HP = 0;
-                if (Globals.Scene == 1) { Globals.Traing.Dmg = 10; } else { Globals.Traing.Dmg = 0; }
-                Globals.Traing.str = 0;
+                if (Globals.Scene == 0) { Globals.Training.Def = 10; } else { Globals.Training.Def = 0; }
+                Globals.Training.dex = 0;
+                if (Globals.Scene == 1) { Globals.Training.speed = 10; } else { Globals.Training.speed = 0; }
+                Globals.Training.HP = 0;
+                if (Globals.Scene == 1) { Globals.Training.Dmg = 10; } else { Globals.Training.Dmg = 0; }
+                Globals.Training.str = 0;
 
                 Globals.Scene = 6;
+            }
+            else if (Globals.Quests[Globals.Scene][0].Reward.Name == "Combo")
+            {
+                ComboName.Content = Repository.AllCombos[Globals.Quests[Globals.Scene][0].Reward.Eqip];
+                //add combo and show it
+
+
             }
             else
             {
@@ -86,6 +95,11 @@ namespace Down_of_Nibo
         private void Button_Click_Reject(object sender, RoutedEventArgs e)
         {
             QestInfo.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_ComboClose(object sender, RoutedEventArgs e)
+        {
+            ComboInfo.Visibility = Visibility.Hidden;
         }
     }
 }

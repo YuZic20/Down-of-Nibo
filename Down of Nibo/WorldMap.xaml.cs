@@ -24,5 +24,20 @@ namespace Down_of_Nibo
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Globals.Scene = 0;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Globals.Scene = 1;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Globals.Scene = 2;
+        }
     }
 }
