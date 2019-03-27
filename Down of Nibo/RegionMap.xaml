@@ -63,10 +63,11 @@
                 <RowDefinition Height="3*"/>
                 
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Width="50" HorizontalAlignment="Right" Click="Button_Click_ComboClose">X</Button>
+            
             <Label Grid.Row="0" Name="ComboName" >Combo: Slash</Label>
+            <Button Grid.Row="0" Width="50" HorizontalAlignment="Right" Click="Button_Click_ComboClose">X</Button>
             <TextBlock Grid.Row="1" Name="ComboDescripion" TextWrapping="WrapWithOverflow">Sekne mečem</TextBlock>
-            <Label Grid.Row="2">Combo Kod:  W D R S A</Label>
+            <Label Grid.Row="2" Name="ComboCode">Combo Kod:  W D R S A</Label>
             
 
             

@@ -11,28 +11,30 @@ namespace Down_of_Nibo
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public Stats BaseStats { get; set; }
+        public int BaseDifficlty { get; set; }
         public List<int> ComboCode { get; set; } = new List<int>();
         public List<Effect_Duration> Effects { get; set; } = new List<Effect_Duration>();
         Random rand = new Random();
 
 
-        public List<int> GenerateCode(Stats Character, Stats BaseStats, int BaseDifficlty)
+        public void GenerateCode(Stats Character)
         {
             List<int> CodeToReturn = new List<int>();
             if (Character.Def > BaseStats.Def && Character.dex > BaseStats.dex && Character.Dmg > BaseStats.Dmg && Character.speed > BaseStats.speed && Character.str > BaseStats.str) 
             {
                 if (Character.Def > BaseStats.Def + 20 && Character.dex > BaseStats.dex + 20 && Character.Dmg > BaseStats.Dmg + 20 && Character.speed > BaseStats.speed + 20 && Character.str > BaseStats.str + 20) //easy
                 {
-                    return GenerateCodeRND(BaseDifficlty, -(BaseDifficlty / 2), Globals.learndCombos);
+                    ComboCode = GenerateCodeRND(BaseDifficlty, -(BaseDifficlty / 2), Globals.learndCombos);
                 }
                 else //normal
                 {
-                    return GenerateCodeRND(BaseDifficlty, 0, Globals.learndCombos);
+                    ComboCode = GenerateCodeRND(BaseDifficlty, 0, Globals.learndCombos);
                 }
             }
             else // hard
             {
-                return GenerateCodeRND(BaseDifficlty, BaseDifficlty * 2, Globals.learndCombos);
+                ComboCode = GenerateCodeRND(BaseDifficlty, BaseDifficlty, Globals.learndCombos);
             }
              
         }
@@ -63,6 +65,10 @@ namespace Down_of_Nibo
                 {
                     return ComboToReturn;
                 }
+                else
+                {
+                    ComboToReturn.Clear();
+                }
             }
             
             
@@ -75,7 +81,7 @@ namespace Down_of_Nibo
             {
                 if (ExistingCombo.ComboCode.Count() == lenght)
                 {
-                    for (int i = lenght; i >= 1; i--)
+                    for (int i = lenght-1; i >= 0; i--)
                     {
                         if (ExistingCombo.ComboCode[i] == ComboToCheck[i])
                         {
@@ -84,7 +90,7 @@ namespace Down_of_Nibo
                     }
                 }
             }
-            if (Strike == 0)
+            if (Strike != lenght-1)
             {
                 return false;
             }
