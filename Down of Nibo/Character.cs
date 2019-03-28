@@ -74,11 +74,11 @@ namespace Down_of_Nibo
                 ReturnStats.Dmg = ReturnStats.Dmg + tempStats.Dmg;
                 ReturnStats.dex = ReturnStats.dex + tempStats.dex;
                 //float Stas
-                ReturnStats.Def = ReturnStats.Def + (tempStats.Def * character.Stats.Def);
-                ReturnStats.speed = ReturnStats.speed + (tempStats.speed * character.Stats.speed);
-                ReturnStats.str = ReturnStats.str + (tempStats.str * character.Stats.str);
-                ReturnStats.Dmg = ReturnStats.Dmg + (tempStats.Dmg * character.Stats.Dmg);
-                ReturnStats.dex = ReturnStats.dex + (tempStats.dex * character.Stats.dex);
+                ReturnStats.Def = ReturnStats.Def + ((tempStats.Def /100)* character.Stats.Def);
+                ReturnStats.speed = ReturnStats.speed + ((tempStats.speed /100)* character.Stats.speed);
+                ReturnStats.str = ReturnStats.str + ((tempStats.str /100)* character.Stats.str);
+                ReturnStats.Dmg = ReturnStats.Dmg + ((tempStats.Dmg /100)* character.Stats.Dmg);
+                ReturnStats.dex = ReturnStats.dex + ((tempStats.dex /100)* character.Stats.dex);
 
             }
 
@@ -94,11 +94,11 @@ namespace Down_of_Nibo
                 ReturnStats.Dmg = ReturnStats.Dmg + effect.FixedStats.Dmg;
                 ReturnStats.dex = ReturnStats.dex + effect.FixedStats.dex;
                 //float Stas
-                ReturnStats.Def = ReturnStats.Def + (effect.MStats.Def * character.Stats.Def);
-                ReturnStats.speed = ReturnStats.speed + (effect.MStats.speed * character.Stats.speed);
-                ReturnStats.str = ReturnStats.str + (effect.MStats.str * character.Stats.str);
-                ReturnStats.Dmg = ReturnStats.Dmg + (effect.MStats.Dmg * character.Stats.Dmg);
-                ReturnStats.dex = ReturnStats.dex + (effect.MStats.dex * character.Stats.dex);
+                ReturnStats.Def = ReturnStats.Def + ((effect.MStats.Def / 100) * character.Stats.Def);
+                ReturnStats.speed = ReturnStats.speed + ((effect.MStats.speed / 100) * character.Stats.speed);
+                ReturnStats.str = ReturnStats.str + ((effect.MStats.str / 100) * character.Stats.str);
+                ReturnStats.Dmg = ReturnStats.Dmg + ((effect.MStats.Dmg / 100) * character.Stats.Dmg);
+                ReturnStats.dex = ReturnStats.dex + ((effect.MStats.dex / 100) * character.Stats.dex);
 
             }
                 
@@ -125,11 +125,11 @@ namespace Down_of_Nibo
                     ReturnStats.Dmg = ReturnStats.Dmg + effect.FixedStats.Dmg;
                     ReturnStats.dex = ReturnStats.dex + effect.FixedStats.dex;
                     //float Stas
-                    ReturnStats.Def = ReturnStats.Def + (effect.MStats.Def * character.Stats.Def);
-                    ReturnStats.speed = ReturnStats.speed + (effect.MStats.speed * character.Stats.speed);
-                    ReturnStats.str = ReturnStats.str + (effect.MStats.str * character.Stats.str);
-                    ReturnStats.Dmg = ReturnStats.Dmg + (effect.MStats.Dmg * character.Stats.Dmg);
-                    ReturnStats.dex = ReturnStats.dex + (effect.MStats.dex * character.Stats.dex);
+                    ReturnStats.Def = ReturnStats.Def + ((effect.MStats.Def / 100) * character.Stats.Def);
+                    ReturnStats.speed = ReturnStats.speed + ((effect.MStats.speed / 100) * character.Stats.speed);
+                    ReturnStats.str = ReturnStats.str + ((effect.MStats.str / 100) * character.Stats.str);
+                    ReturnStats.Dmg = ReturnStats.Dmg + ((effect.MStats.Dmg / 100) * character.Stats.Dmg);
+                    ReturnStats.dex = ReturnStats.dex + ((effect.MStats.dex / 100) * character.Stats.dex);
 
                 }
             }
@@ -167,7 +167,7 @@ namespace Down_of_Nibo
             foreach (Effect_Duration efect in efects)
             {
                 Attac = Attac + efect.FixedStats.HP;
-                Attac = Attac + (efect.MStats.HP * Stats.HP);
+                Attac = Attac + ((efect.MStats.HP / 100) * Stats.HP);
             }
             return Attac;
         }

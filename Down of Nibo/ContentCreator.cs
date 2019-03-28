@@ -26,6 +26,8 @@ namespace Down_of_Nibo
         }
         public static void GenerateQuests()
         {
+            //poslední quest nejde, přidat null exeption
+
             List<Quest> quests = new List<Quest>();
             Globals.Quests[0] = quests;
 
@@ -33,10 +35,10 @@ namespace Down_of_Nibo
             quest.decription = "kill em alll1";
 
             Mob mob = new Mob();
-            mob.Stats.Dmg = 50;
+            mob.Stats.Dmg = 5;
             quest.Mobs[1] = mob;           
 
-            Globals.Quests[0].Add(quest);
+            //Globals.Quests[0].Add(quest);
 
 
 
@@ -44,7 +46,7 @@ namespace Down_of_Nibo
             quest1.decription = "kill em alll2";
 
             Mob mob2 = new Mob();
-            mob2.Stats.Dmg = 50;
+            mob2.Stats.Dmg = 5;
             quest1.Mobs[1] = mob2;
 
             Item item2 = new Item();
@@ -57,14 +59,30 @@ namespace Down_of_Nibo
             quest2.decription = "kill em alll3";
 
             Mob mob3 = new Mob();
-            mob3.Stats.Dmg = 50;
-            quest.Mobs[1] = mob3;
+            mob3.Stats.Dmg = 5;
+            quest2.Mobs[1] = mob3;
 
             Item item3 = new Item();
-            item3.Name = "dombo";
+            item3.Name = "Last Training";
             quest2.Reward = item3;
 
             Globals.Quests[0].Add(quest2);
+
+            Quest quest4 = new Quest();
+            quest4.decription = "kill em alll4";
+
+            Mob mob4 = new Mob();
+            mob4.Stats.Dmg = 5;
+            quest4.Mobs[1] = mob4;
+
+            Item item4 = new Item();
+            item4.Name = "Last Training";
+            quest4.Reward = item3;
+
+            Globals.Quests[0].Add(quest4);
+            Globals.Quests[0].Add(quest4);
+
+
 
         }
         public static void GenerateContent()
@@ -76,15 +94,15 @@ namespace Down_of_Nibo
         {
 
             Combo combo = new Combo();
-            combo.BaseDifficlty = 5;
+            combo.BaseDifficlty = 0;
             combo.Description = "Oheň";
             Stats stats = new Stats();
-            stats.Def = 5;
-            stats.dex = 5;
-            stats.Dmg = 5;
-            stats.HP = 5;
-            stats.speed = 5;
-            stats.str = 5;
+            stats.Def = 0;
+            stats.dex = 0;
+            stats.Dmg = 0;
+            stats.HP = 100;
+            stats.speed = 0;
+            stats.str = 0;
 
             combo.BaseStats = stats;
             combo.Name = "nwm";
@@ -93,7 +111,10 @@ namespace Down_of_Nibo
             effect_Duration.Description = "uff";
             effect_Duration.Duration = 1;
             effect_Duration.FixedStats = stats;
+            effect_Duration.MStats = stats;
             effect_Duration.Name = "ufff";
+
+            combo.Effects.Add(effect_Duration);
 
             Repository.AllCombos.Add(combo);
             

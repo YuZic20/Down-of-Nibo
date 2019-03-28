@@ -33,7 +33,7 @@ namespace Down_of_Nibo
         public Battle()
         {
             InitializeComponent();
-            
+            Globals.AddTimer();
             DispatcherTimer timer = new DispatcherTimer(); //když je myš na okně čas se seká
             timer.Interval = TimeSpan.FromMilliseconds(1);
             timer.Tick += timer_Tick;

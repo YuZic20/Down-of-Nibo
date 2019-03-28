@@ -31,6 +31,7 @@ namespace Down_of_Nibo
         public Train()
         {
             InitializeComponent();
+            Globals.AddTimer();
             GetTimerSpeed();
             GenerateCombo();
             Lvl = 1;

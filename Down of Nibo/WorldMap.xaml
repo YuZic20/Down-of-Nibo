@@ -35,6 +35,7 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
+            <Label Name="GameTime" Grid.Column="10">568</Label>
             <Button Grid.Row="0" Grid.Column="0" >return</Button>
             <Button Grid.Row="6" Grid.Column="6" Click="Button_Click">Země rychlosti</Button>
             <Button Grid.Row="5" Grid.Column="3" Click="Button_Click_1">Země síly</Button>

@@ -35,8 +35,9 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
+            <Label Name="GameTime" Grid.Column="10">568</Label>
             <Button Grid.Row="0" Grid.Column="0" Click="Return_Button_Click">return</Button>
-            <Button Grid.Row="4" Grid.Column="6" Click="Button_Click_Action">Qest</Button>
+            <Button Name="QuestButton" Grid.Row="4" Grid.Column="6" Click="Button_Click_Action">Qest</Button>
         </Grid>
         <Grid Width="500" Height="300" Background="White" Visibility="Hidden" Name="QestInfo">
             <Grid.RowDefinitions>

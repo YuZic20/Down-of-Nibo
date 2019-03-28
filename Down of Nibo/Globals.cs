@@ -17,6 +17,7 @@ namespace Down_of_Nibo
         public static RegionMap[] regionMaps { get; set; } = new RegionMap[3];
         public static List<Quest>[] Quests { get; set; } = new List<Quest>[3];
         public static Stats Training { get; set; } = new Stats();
+        public static WorldMap world { get; set; } = new WorldMap();
 
         static int scene;
         public static int Scene
@@ -62,7 +63,7 @@ namespace Down_of_Nibo
             }
             else if (scene == 3)
             {
-                ExistingInstanceOfMainWindow.MainWindowFrame.Content = new WorldMap();
+                ExistingInstanceOfMainWindow.MainWindowFrame.Content = world;
             }
             else if (scene == 4)
             {
@@ -76,9 +77,23 @@ namespace Down_of_Nibo
             {
                 ExistingInstanceOfMainWindow.MainWindowFrame.Content = new Train();
             }
-            
-                
+            updateTimer();
+
+
+
         }
-        
+        public static void updateTimer()
+        {
+            foreach(RegionMap region in regionMaps)
+            {
+                region.GameTime.Content = Turns;
+            }
+            world.GameTime.Content = Turns;
+        }
+        public static void AddTimer(int Time =1)
+        {
+            Turns -= Time;
+        }
+
     }
 }

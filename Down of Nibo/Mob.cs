@@ -84,7 +84,7 @@ namespace Down_of_Nibo
             foreach (Effect_Duration efect in efects)
             {
                 Attac = Attac + efect.FixedStats.HP;
-                Attac = Attac + (efect.MStats.HP * Stats.HP);
+                Attac = Attac + ((efect.MStats.HP/100) * Stats.HP); //opravit
             }
             return Attac;
         }

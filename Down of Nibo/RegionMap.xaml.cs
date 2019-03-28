@@ -110,7 +110,26 @@ namespace Down_of_Nibo
 
                 QestInfo.Visibility = Visibility.Hidden;
                 ComboInfo.Visibility = Visibility.Visible;
+                Globals.AddTimer();
+                Globals.updateTimer();
                 nextQuest();
+
+
+            }
+            else if (Globals.Quests[Globals.Scene][0].Reward.Name == "Last Training")
+            {
+                if (Globals.Scene == 0) { Globals.Training.Def = 50; } else { Globals.Training.Def = 0; }
+                Globals.Training.dex = 0;
+                if (Globals.Scene == 1) { Globals.Training.speed = 50; } else { Globals.Training.speed = 0; }
+                Globals.Training.HP = 0;
+                if (Globals.Scene == 1) { Globals.Training.Dmg = 50; } else { Globals.Training.Dmg = 0; }
+                Globals.Training.str = 0;
+                QestInfo.Visibility = Visibility.Hidden;
+                nextQuest();
+                Globals.Scene = 6;
+
+
+                QuestButton.Visibility = Visibility.Hidden;
 
 
             }
