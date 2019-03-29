@@ -67,6 +67,9 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Mob.cs" />
+    <Compile Include="PlayerInventory.xaml.cs">
+      <DependentUpon>PlayerInventory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Quest.cs" />
     <Compile Include="RegionMap.xaml.cs">
       <DependentUpon>RegionMap.xaml</DependentUpon>
@@ -96,6 +99,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PlayerInventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegionMap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

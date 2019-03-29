@@ -10,10 +10,10 @@ namespace ClassLibrary2
     {
         public string Name { get; set; }
 
-        //public enum Eqipible { Not, head, Body, Weapon };
+        //public enum Eqipible { Not, Body, shoos,  Weapon };
         public int Eqip { get; set; }
         public bool usable { get; set; }
 
-        public List<AEffect> Efects { get; set; } = new List<AEffect>();
+        public List<Effect_Duration> Efects { get; set; } = new List<Effect_Duration>();
     }
 }

@@ -44,6 +44,7 @@ namespace Down_of_Nibo
                 4 Menu
                 5 battle
                 6 training
+                7 Inventory
                 */
             //change code here...
             MainWindow ExistingInstanceOfMainWindow = Window.GetWindow(Application.Current.MainWindow) as MainWindow;
@@ -78,6 +79,7 @@ namespace Down_of_Nibo
                 ExistingInstanceOfMainWindow.MainWindowFrame.Content = new Train();
             }
             updateTimer();
+            ExistingInstanceOfMainWindow.MainWindowFrame.Content = new PlayerInventory();
 
 
 

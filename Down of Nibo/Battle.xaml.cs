@@ -271,6 +271,8 @@ namespace Down_of_Nibo
                 if (ComboClip.SequenceEqual(ComboCodes.ComboCode))
                 {
                     ComboToUse = ComboCodes;
+                    
+                    
                 }
             }
 
@@ -279,6 +281,16 @@ namespace Down_of_Nibo
                 ComboClip.Clear();
                 return;
             }
+
+
+            foreach (Effect_Duration stats in ComboToUse.Effects)
+            {
+                if (stats.FixedStats.HP > 0)
+                {
+                    stats.FixedStats.HP += Globals.Player.GetFullStats(Globals.Player).Dmg;
+                }
+            }
+
 
             if (OnSelf)
             {
