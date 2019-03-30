@@ -77,6 +77,9 @@ namespace Down_of_Nibo
             else if (scene == 6)
             {
                 ExistingInstanceOfMainWindow.MainWindowFrame.Content = new Train();
+            }else if (scene == 7)
+            {
+                ExistingInstanceOfMainWindow.MainWindowFrame.Content = new PlayerInventory();
             }
             updateTimer();
             ExistingInstanceOfMainWindow.MainWindowFrame.Content = new PlayerInventory();

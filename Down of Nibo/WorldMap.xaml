@@ -40,6 +40,7 @@
             <Button Grid.Row="6" Grid.Column="6" Click="Button_Click">Země rychlosti</Button>
             <Button Grid.Row="5" Grid.Column="3" Click="Button_Click_1">Země síly</Button>
             <Button Grid.Row="3" Grid.Column="5" Click="Button_Click_2">Země Ochrany</Button>
+            <Button Grid.Row="10" Grid.Column="10" Click="Button_Inventory">Inventář</Button>
         </Grid>
     </Grid>
 </Page>

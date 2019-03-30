@@ -39,5 +39,9 @@ namespace Down_of_Nibo
         {
             Globals.Scene = 2;
         }
+        private void Button_Inventory(object sender, RoutedEventArgs e)
+        {
+            Globals.Scene = 7;
+        }
     }
 }

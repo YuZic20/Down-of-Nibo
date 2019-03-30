@@ -188,5 +188,9 @@ namespace Down_of_Nibo
             PrintItems();
             
         }
+        private void Button_Inventory(object sender, RoutedEventArgs e)
+        {
+            Globals.Scene = 3;
+        }
     }
 }

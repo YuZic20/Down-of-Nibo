@@ -15,8 +15,12 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="2">
+
+                <Button Click="Button_Inventory" >X</Button>
+                <Button Name="Action" Click="Button_Click_1"  >Akce</Button>
+            </StackPanel>
             
-            <Button Name="Action" Click="Button_Click_1" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="2">Akce</Button>
             <StackPanel Grid.Column="0">
                 <StackPanel Orientation="Horizontal">
                     <Label >Tělo:</Label>

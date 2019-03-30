@@ -158,5 +158,10 @@ namespace Down_of_Nibo
         {
             Globals.Quests[Globals.Scene].RemoveAt(0);
         }
+
+        private void Button_Inventory(object sender, RoutedEventArgs e)
+        {
+            Globals.Scene = 7;
+        }
     }
 }
