@@ -25,6 +25,9 @@ namespace Down_of_Nibo
         public PlayerInventory()
         {
             InitializeComponent();
+            PrintItems();
+            
+
         }
         public void PrintItem(Item ItemToPrint)
         {
@@ -68,6 +71,7 @@ namespace Down_of_Nibo
 
                 ItemEffects.Children.Add(labelDes);
             }
+            
         }
         public void PrintItems()
         {
@@ -108,8 +112,8 @@ namespace Down_of_Nibo
                 button.Click += Button_Click;
                 ItemsList.Children.Add(button);
             }
+            PrintPlayerStats();
 
-            
         }
 
         private void Body_Click(object sender, RoutedEventArgs e)
@@ -191,6 +195,16 @@ namespace Down_of_Nibo
         private void Button_Inventory(object sender, RoutedEventArgs e)
         {
             Globals.Scene = 3;
+        }
+        public void PrintPlayerStats()
+        {
+            Stats playerRealStats = Globals.Player.GetFullStats(Globals.Player);
+
+            Hp.Content = "Životy: " + playerRealStats.HP;
+            Speed.Content = "Ryclost: " + playerRealStats.speed;
+            Def.Content = "Ochrana: " + playerRealStats.Def;
+            DMG.Content = "Síla: " + playerRealStats.Dmg;
+
         }
     }
 }

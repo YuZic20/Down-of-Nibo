@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+
 namespace Down_of_Nibo
 {
     public static class Globals
@@ -17,7 +18,7 @@ namespace Down_of_Nibo
         public static RegionMap[] regionMaps { get; set; } = new RegionMap[3];
         public static List<Quest>[] Quests { get; set; } = new List<Quest>[3];
         public static Stats Training { get; set; } = new Stats();
-        public static WorldMap world { get; set; } = new WorldMap();
+        public static WorldMap World { get; set; } = new WorldMap();
 
         static int scene;
         public static int Scene
@@ -64,11 +65,11 @@ namespace Down_of_Nibo
             }
             else if (scene == 3)
             {
-                ExistingInstanceOfMainWindow.MainWindowFrame.Content = world;
+                ExistingInstanceOfMainWindow.MainWindowFrame.Content = World;
             }
             else if (scene == 4)
             {
-                //menu
+                ExistingInstanceOfMainWindow.MainWindowFrame.Content = new MainMenu();
             }
             else if (scene == 5)
             {
@@ -82,7 +83,7 @@ namespace Down_of_Nibo
                 ExistingInstanceOfMainWindow.MainWindowFrame.Content = new PlayerInventory();
             }
             updateTimer();
-            ExistingInstanceOfMainWindow.MainWindowFrame.Content = new PlayerInventory();
+            
 
 
 
@@ -93,7 +94,7 @@ namespace Down_of_Nibo
             {
                 region.GameTime.Content = Turns;
             }
-            world.GameTime.Content = Turns;
+            World.GameTime.Content = Turns;
         }
         public static void AddTimer(int Time =1)
         {

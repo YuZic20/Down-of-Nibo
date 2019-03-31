@@ -43,5 +43,11 @@ namespace Down_of_Nibo
         {
             Globals.Scene = 7;
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            GameFileHandle.SaveGame();
+            Globals.Scene = 4;
+        }
     }
 }

@@ -15,28 +15,24 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="2">
-
-                <Button Click="Button_Inventory" >X</Button>
-                <Button Name="Action" Click="Button_Click_1"  >Akce</Button>
-            </StackPanel>
+            
             
             <StackPanel Grid.Column="0">
                 <StackPanel Orientation="Horizontal">
                     <Label >Tělo:</Label>
-                    <Button Name="Body" Click="Body_Click">brnění</Button>
+                    <Button Name="Body" Click="Body_Click">Nic</Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label >Boty:</Label>
-                    <Button Name="Shoes" Click="Shoes_Click">brnění</Button>
+                    <Button Name="Shoes" Click="Shoes_Click">Nic</Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label >Zbraň:</Label>
-                    <Button Name="Weapon" Click="Weapon_Click">brnění</Button>
+                    <Button Name="Weapon" Click="Weapon_Click">Nic</Button>
                     
                 </StackPanel>
                 <StackPanel Name="ItemsList">
-                    <Button Click="Button_Click">Helma</Button>
+                    
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Column="1">
@@ -46,24 +42,18 @@
                 <Label Name="DMG">DMG</Label>
             </StackPanel>
             <StackPanel Grid.Column="2">
-                <Label Name="ItemName">Magické kožené boty</Label>
-                <Label Name="ItemType">Item se dá obléknout na místo bot.</Label>
+                <Label Name="ItemName"></Label>
+                <Label Name="ItemType"></Label>
                 <Label>Efekty:</Label>
                 <StackPanel Name="ItemEffects">
-                    <Label>Rychlost I:</Label>
-                    <TextBox TextWrapping="WrapWithOverflow">Normální kožené boty s trochu magieje přidané uvnitř. sice mají v sobje magii ale nejsou velice silné</TextBox>
-                    <Label>Rychlost I:</Label>
-                    <TextBox TextWrapping="WrapWithOverflow">Normální kožené boty s trochu magieje přidané uvnitř. sice mají v sobje magii ale nejsou velice silné</TextBox>
-                    <Label>Rychlost I:</Label>
-                    <TextBox TextWrapping="WrapWithOverflow">Normální kožené boty s trochu magieje přidané uvnitř. sice mají v sobje magii ale nejsou velice silné</TextBox>
-                    <Label>Rychlost I:</Label>
-                    <TextBox TextWrapping="WrapWithOverflow">Normální kožené boty s trochu magieje přidané uvnitř. sice mají v sobje magii ale nejsou velice silné</TextBox>
-                    <Label>Rychlost I:</Label>
-                    <TextBox TextWrapping="WrapWithOverflow">Normální kožené boty s trochu magieje přidané uvnitř. sice mají v sobje magii ale nejsou velice silné</TextBox>
-                    <Label>Rychlost I:</Label>
-                    <TextBox TextWrapping="WrapWithOverflow">Normální kožené boty s trochu magieje přidané uvnitř. sice mají v sobje magii ale nejsou velice silné</TextBox>
+                    
                 </StackPanel>
+    
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="2">
 
+                <Button Click="Button_Inventory" >X</Button>
+                <Button Name="Action" Click="Button_Click_1"  >Akce</Button>
             </StackPanel>
         </Grid>
     </ScrollViewer>

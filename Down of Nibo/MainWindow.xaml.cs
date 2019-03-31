@@ -30,7 +30,7 @@ namespace Down_of_Nibo
             ContentCreator.GenerateContent();                
 
 
-            Globals.Scene = 3;
+            Globals.Scene = 4;
             
         }
     }
