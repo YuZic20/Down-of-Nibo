@@ -10,6 +10,7 @@
 
     <Grid>
         <Image Source="Assets\Img\fantasy_map.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="1000" Width="1000"></Image>
+        
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
@@ -37,10 +38,44 @@
             </Grid.RowDefinitions>
             <Label Name="GameTime" Grid.Column="10">568</Label>
             <Button Grid.Row="0" Grid.Column="0" Click="Button_Click_3">Halvní menu</Button>
-            <Button Grid.Row="6" Grid.Column="6" Click="Button_Click">Země rychlosti</Button>
-            <Button Grid.Row="5" Grid.Column="3" Click="Button_Click_1">Země síly</Button>
+            <Button Grid.Row="6" Grid.Column="7" Click="Button_Click">Země rychlosti</Button>
+            <Button Grid.Row="6" Grid.Column="3" Click="Button_Click_1">Země síly</Button>
+            <Button Grid.Row="5" Grid.Column="5" Click="Button_Click_4">boss</Button>
             <Button Grid.Row="3" Grid.Column="5" Click="Button_Click_2">Země Ochrany</Button>
             <Button Grid.Row="10" Grid.Column="10" Click="Button_Inventory">Inventář</Button>
+        </Grid>
+        <Grid Width="500" Height="300" Background="White" Visibility="Hidden" Name="QestInfo">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" Name="Descripion" TextWrapping="WrapWithOverflow" >asdfasdf asdf asdf adsfasdkjlfas bfaksjdjfaskjdjfa bsdkfjasdfkljabsdl kfabjsdlkfjbasdlkfj basdlkfjabsdlkfjbaslkjdfba sdlkfjb askljdbfaklsdbjfalskjjdbf alskjdbf aklsjdbfaskljdfb alskjdjfb alskdbfj alskdfbja lskdbf laksdbf lkajsdfb alksdbf alks</TextBlock>
+            
+            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Width="100" Click="Button_Click_Accept">Acept</Button>
+                <Button Margin="20 0 0 0" Width="100" Click="Button_Click_Reject">Reject</Button>
+            </StackPanel>
+
+            
+
+        </Grid>
+        <Grid Width="500" Height="300" Background="White" Visibility="Hidden" Name="WinScrean">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="15*"/>
+
+
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Name="ComboName" >Vyhrál jsi</Label>
+            <Button Grid.Row="0" Width="50" HorizontalAlignment="Right" Click="Button_Click_5">X</Button>
+            <TextBlock Grid.Row="1" Name="ComboDescripion" TextWrapping="WrapWithOverflow">Zachráníl jsi prince. a vaše země bude v pořádku! bla blaa bla</TextBlock>
+            
+
         </Grid>
     </Grid>
 </Page>

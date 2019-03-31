@@ -83,5 +83,12 @@ namespace Down_of_Nibo
             }
 
         }
+        public static void DeleteSave()
+        {
+            if (File.Exists(@"C:\Users\W0olf\Desktop\drivers/Game.txt"))
+            {
+                File.Delete(@"C:\Users\W0olf\Desktop\drivers/Game.txt");
+            }
+        }
     }
 }

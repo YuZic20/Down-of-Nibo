@@ -142,19 +142,19 @@ namespace Down_of_Nibo
 
             BitmapImage BackImageSource = new BitmapImage();
             BackImageSource.BeginInit();
-            BackImageSource.UriSource = new Uri(@"Assets\Img\fantasy_map.png", UriKind.Relative);
+            BackImageSource.UriSource = new Uri(@"Assets\Img\fantasy_map3.png", UriKind.Relative);
             BackImageSource.EndInit();
             Globals.regionMaps[0].RegionMapImage.Source = BackImageSource;
 
             BackImageSource = new BitmapImage();
             BackImageSource.BeginInit();
-            BackImageSource.UriSource = new Uri(@"Assets\Img\fantasy_map.png", UriKind.Relative);
+            BackImageSource.UriSource = new Uri(@"Assets\Img\fantasy_map1.png", UriKind.Relative);
             BackImageSource.EndInit();
             Globals.regionMaps[1].RegionMapImage.Source = BackImageSource;
 
             BackImageSource = new BitmapImage();
             BackImageSource.BeginInit();
-            BackImageSource.UriSource = new Uri(@"Assets\Img\fantasy_map.png", UriKind.Relative);
+            BackImageSource.UriSource = new Uri(@"Assets\Img\fantasy_map2.png", UriKind.Relative);
             BackImageSource.EndInit();
             Globals.regionMaps[2].RegionMapImage.Source = BackImageSource;
 

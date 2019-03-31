@@ -31,6 +31,9 @@ namespace Down_of_Nibo
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            ContentCreator.GenerateMaps();
+            ContentCreator.GenerateContent();
+            // content generate
             Dificlty.Visibility = Visibility.Visible;
         }
 

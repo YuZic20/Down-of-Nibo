@@ -206,5 +206,12 @@ namespace Down_of_Nibo
             DMG.Content = "Síla: " + playerRealStats.Dmg;
 
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Globals.Player.Stats.HP = 1000;
+            Globals.Turns++;
+            PrintPlayerStats();
+        }
     }
 }

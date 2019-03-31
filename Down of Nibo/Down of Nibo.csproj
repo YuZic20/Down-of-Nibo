@@ -163,6 +163,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Img\fantasy_map.png" />
+    <Resource Include="Assets\Img\GrassLands.png" />
+    <Resource Include="Assets\Img\Watterfall.gif" />
     <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\demon-Files\GIFS\demon-attack-no-breath.gif" />
     <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\demon-Files\GIFS\demon-attack.gif" />
     <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\demon-Files\GIFS\demon-idle.gif" />
@@ -200,9 +202,6 @@
     <Resource Include="Assets\sprites\sold\Attack.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Img\GrassLands.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\sprites\HBandit\Attack.gif" />
     <Resource Include="Assets\sprites\HBandit\Idle.gif" />
     <Resource Include="Assets\sprites\LBandit\Attack.gif" />
@@ -219,7 +218,9 @@
     <Resource Include="Assets\sprites\Ghoast.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Img\Watterfall.gif" />
+    <Resource Include="Assets\Img\fantasy_map1.png" />
+    <Resource Include="Assets\Img\fantasy_map2.png" />
+    <Resource Include="Assets\Img\fantasy_map3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

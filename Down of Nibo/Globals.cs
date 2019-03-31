@@ -69,6 +69,8 @@ namespace Down_of_Nibo
             }
             else if (scene == 4)
             {
+                               
+
                 ExistingInstanceOfMainWindow.MainWindowFrame.Content = new MainMenu();
             }
             else if (scene == 5)

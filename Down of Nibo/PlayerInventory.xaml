@@ -54,6 +54,7 @@
 
                 <Button Click="Button_Inventory" >X</Button>
                 <Button Name="Action" Click="Button_Click_1"  >Akce</Button>
+                <Button Click="Button_Click_2"  >Odpočinout</Button>
             </StackPanel>
         </Grid>
     </ScrollViewer>

@@ -49,5 +49,26 @@ namespace Down_of_Nibo
             GameFileHandle.SaveGame();
             Globals.Scene = 4;
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            QestInfo.Visibility = Visibility.Visible;
+        }
+        
+        private void Button_Click_Reject(object sender, RoutedEventArgs e)
+        {
+            QestInfo.Visibility = Visibility.Hidden;
+        }
+        private void Button_Click_Accept(object sender, RoutedEventArgs e)
+        {
+            //start battle
+            WinScrean.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            GameFileHandle.DeleteSave();
+            Globals.Scene = 4;
+        }
     }
 }
