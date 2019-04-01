@@ -24,6 +24,108 @@ namespace Down_of_Nibo
             Globals.Scene = 3;
 
         }
+        public static void GenerateMobs()
+        {
+            Mob LBandita = new Mob();
+            LBandita.GifPath_Attac = @"Assets\sprites\LBandit\Attack.gif";
+            LBandita.GifPath_Idle = @"Assets\sprites\LBandit\idle.gif";
+            LBandita.ImgPath = @"Assets\sprites\LBandit\bandit_img.jpg";
+            LBandita.Name = "Bandita";
+
+            Stats LBanditaStats = new Stats();
+            LBanditaStats.Def = 0;
+            LBanditaStats.Dmg = 100;
+            LBanditaStats.speed = 0;
+
+            LBandita.Stats = LBanditaStats;
+            Repository.AllMobs.Add(LBandita);
+
+
+            Mob HBandita = new Mob();
+            HBandita.GifPath_Attac = @"Assets\sprites\HBandit\Attack.gif";
+            HBandita.GifPath_Idle = @"Assets\sprites\HBandit\idle.gif";
+            HBandita.ImgPath = @"Assets\sprites\HBandit\bandit_img.jpg";
+            HBandita.Name = "Bandita expert";
+
+            Stats HBanditaStats = new Stats();
+            HBanditaStats.Def = 50;
+            HBanditaStats.Dmg = 100;
+            HBanditaStats.speed = 50;
+
+            HBandita.Stats = HBanditaStats;
+            Repository.AllMobs.Add(HBandita);
+
+            Mob Solder = new Mob();
+            Solder.GifPath_Attac = @"Assets\sprites\sold\Attack.gif";
+            Solder.GifPath_Idle = @"Assets\sprites\sold\idle.gif";
+            Solder.ImgPath = @"Assets\sprites\sold\img.jpg";
+            Solder.Name = "Voják";
+
+            Stats SolderStats = new Stats();
+            SolderStats.Def = 70;
+            SolderStats.Dmg = 200;
+            SolderStats.speed = 50;
+
+            Solder.Stats = SolderStats;
+            Repository.AllMobs.Add(Solder);
+
+            Mob Hell_Beast = new Mob();
+            Hell_Beast.GifPath_Attac = @"Assets\sprites\demon-Files\GIFS\demon-attack.gif";
+            Hell_Beast.GifPath_Idle = @"Assets\sprites\demon-Files\GIFS\demon-idle.gif";
+            Hell_Beast.ImgPath = @"Assets\sprites\demon-Files\GIFS\demon.png"; 
+            Hell_Beast.Name = "Boss";
+
+            Stats Hell_BeastStats = new Stats();
+            Hell_BeastStats.Def = 200;
+            Hell_BeastStats.Dmg = 300;
+            Hell_BeastStats.speed = 200;
+
+            Hell_Beast.Stats = Hell_BeastStats;
+            Repository.AllMobs.Add(Hell_Beast);
+
+            Mob Ghoast = new Mob();
+            Ghoast.GifPath_Attac = @"Assets\sprites\Ghost-Files\GIFS\ghost-shriek.gif";
+            Ghoast.GifPath_Idle = @"Assets\sprites\Ghost-Files\GIFS\ghost-idle.gif";
+            Ghoast.ImgPath = @"Assets\sprites\Ghost-Files\GIFS\Ghoast.png";
+            Ghoast.Name = "Duch";
+
+            Stats GhoastStats = new Stats();
+            GhoastStats.Def = 100;
+            GhoastStats.Dmg = 20;
+            GhoastStats.speed = 150;
+
+            Ghoast.Stats = GhoastStats;
+            Repository.AllMobs.Add(Ghoast);
+
+            Mob AntiHero = new Mob();
+            AntiHero.GifPath_Attac = @"Assets\sprites\Gothic-hero-Files\GIFS\gothic-hero-attack.gif";
+            AntiHero.GifPath_Idle = @"Assets\sprites\Gothic-hero-Files\GIFS\gothic-hero-idle.gif";
+            AntiHero.ImgPath = @"Assets\sprites\Gothic-hero-Files\GIFS\hero.png"; 
+            AntiHero.Name = "Padlý hrdina";
+
+            Stats AntiHeroStats = new Stats();
+            AntiHeroStats.Def = 200;
+            AntiHeroStats.Dmg = 300;
+            AntiHeroStats.speed = 100;
+
+            AntiHero.Stats = AntiHeroStats;
+            Repository.AllMobs.Add(AntiHero);
+
+            Mob Demon = new Mob();
+            Demon.GifPath_Attac = @"Assets\sprites\Hell-Beast-Files\GIF\without-stroke\hell-beast-breath.gif";
+            Demon.GifPath_Idle = @"Assets\sprites\Hell-Beast-Files\GIF\without-stroke\hell-beast-idle.gif";
+            Demon.ImgPath = @"Assets\sprites\Hell-Beast-Files\GIF\without-stroke\Demon.png"; 
+            Demon.Name = "Démon";
+
+            Stats DemonStats = new Stats();
+            DemonStats.Def = 200;
+            DemonStats.Dmg = 100;
+            DemonStats.speed = 300;
+
+            Demon.Stats = DemonStats;
+            Repository.AllMobs.Add(Demon);
+
+        }
         public static void GenerateQuests()
         {
             //poslední quest nejde, přidat null exeption

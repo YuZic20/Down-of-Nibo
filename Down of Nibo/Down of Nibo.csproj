@@ -165,39 +165,6 @@
     <Resource Include="Assets\Img\fantasy_map.png" />
     <Resource Include="Assets\Img\GrassLands.png" />
     <Resource Include="Assets\Img\Watterfall.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\demon-Files\GIFS\demon-attack-no-breath.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\demon-Files\GIFS\demon-attack.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\demon-Files\GIFS\demon-idle.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Fire-Skull-Files\GIF\fire-skull-no-fire.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Fire-Skull-Files\GIF\fire-skull.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Ghost-Files\GIFS\ghost-appears.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Ghost-Files\GIFS\ghost-idle.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Ghost-Files\GIFS\ghost-shriek.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Ghost-Files\GIFS\ghost-vanish.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Gothic-hero-Files\GIFS\gothic-hero-attack.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Gothic-hero-Files\GIFS\gothic-hero-idle.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Gothic-hero-Files\GIFS\gothic-hero-jump.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Gothic-hero-Files\GIFS\gothic-hero-run.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Gothic-hero-p2-Files\GIFS\gothic-hero-crouch-slash.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Gothic-hero-p2-Files\GIFS\gothic-hero-crouch.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Gothic-hero-p2-Files\GIFS\gothic-hero-hurt.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Gothic-hero-p2-Files\GIFS\gothic-hero-jump-attack.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Gothic-hero-p2-Files\GIFS\gothic-hero-jump-climb.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Beast-Files\GIF\fire-ball.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Beast-Files\GIF\with-stroke\hell-beast-breath.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Beast-Files\GIF\with-stroke\hell-beast-burn.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Beast-Files\GIF\with-stroke\hell-beast-idle.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Beast-Files\GIF\without-stroke\hell-beast-breath.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Beast-Files\GIF\without-stroke\hell-beast-burn.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Beast-Files\GIF\without-stroke\hell-beast-idle.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Hound-Files\GIFS\hell-hound-idle.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Hound-Files\GIFS\hell-hound-jump.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Hound-Files\GIFS\hell-hound-run.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Hell-Hound-Files\GIFS\hell-hound-walk.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Nightmare-Files\GIFS\nightmare-galloping-background.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Nightmare-Files\GIFS\nightmare-galloping.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\Nightmare-Files\GIFS\nightmare-idle.gif" />
-    <Resource Include="Assets\sprites\gothicvania patreon collection\gothicvania patreon collection\public-license.txt" />
     <Resource Include="Assets\sprites\sold\Idle.gif" />
     <Resource Include="Assets\sprites\sold\Attack.gif" />
   </ItemGroup>
@@ -212,7 +179,7 @@
     <Resource Include="Assets\sprites\main\Idle.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\sprites\HBandit\bandit_img.jpg" />
+    <Resource Include="Assets\sprites\LBandit\bandit_img.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\sprites\Ghoast.gif" />
@@ -221,6 +188,40 @@
     <Resource Include="Assets\Img\fantasy_map1.png" />
     <Resource Include="Assets\Img\fantasy_map2.png" />
     <Resource Include="Assets\Img\fantasy_map3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\HBandit\bandit_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\sold\img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\demon-Files\GIFS\demon-attack.gif" />
+    <Resource Include="Assets\sprites\demon-Files\GIFS\demon-idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\Ghost-Files\GIFS\ghost-idle.gif" />
+    <Resource Include="Assets\sprites\Ghost-Files\GIFS\ghost-shriek.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\Gothic-hero-Files\GIFS\gothic-hero-attack.gif" />
+    <Resource Include="Assets\sprites\Gothic-hero-Files\GIFS\gothic-hero-idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\Hell-Beast-Files\GIF\without-stroke\hell-beast-breath.gif" />
+    <Resource Include="Assets\sprites\Hell-Beast-Files\GIF\without-stroke\hell-beast-idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\demon-Files\GIFS\demon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\Ghost-Files\GIFS\Ghoast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\Gothic-hero-Files\GIFS\hero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sprites\Hell-Beast-Files\GIF\without-stroke\Demon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
