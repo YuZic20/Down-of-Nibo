@@ -11,7 +11,7 @@ namespace Down_of_Nibo
 {
     public static class GameFileHandle
     {
-        static string path = @"C:\Users\W0olf\Desktop\drivers";
+        static string path = @"data/";
 
         public static void SaveGame()
         {
@@ -85,9 +85,9 @@ namespace Down_of_Nibo
         }
         public static void DeleteSave()
         {
-            if (File.Exists(@"C:\Users\W0olf\Desktop\drivers/Game.txt"))
+            if (File.Exists(@"data/Game.txt"))
             {
-                File.Delete(@"C:\Users\W0olf\Desktop\drivers/Game.txt");
+                File.Delete(@"data/Game.txt");
             }
         }
     }

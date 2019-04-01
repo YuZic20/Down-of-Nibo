@@ -224,14 +224,17 @@ namespace Down_of_Nibo
         }
         public static void GenerateEffects()
         {
+            FileHandle fileHandle = new FileHandle();
 
-
+            Repository.AllEffects = fileHandle.LoadDataEfect();
 
         }
         public static void GenerateItems()
         {
-            
-            
+
+            FileHandle fileHandle = new FileHandle();
+
+            Repository.AllItems = fileHandle.LoadDataItem();
 
 
         }

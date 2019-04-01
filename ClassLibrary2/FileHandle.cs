@@ -10,7 +10,7 @@ namespace ClassLibrary2
 {
     public class FileHandle
     {
-        private string path = @"C:\Users\W0olf\Desktop\drivers";
+        private string path = @"data/";
         public void SaveData(object data)
         {
             string realpath;
