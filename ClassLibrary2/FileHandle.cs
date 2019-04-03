@@ -29,6 +29,8 @@ namespace ClassLibrary2
             }
             
             string json = JsonConvert.SerializeObject(data);
+            System.IO.FileInfo file = new System.IO.FileInfo(realpath);
+            file.Directory.Create();
             System.IO.File.WriteAllText(realpath, json);
         }
         public List<AEffect> LoadDataEfect()

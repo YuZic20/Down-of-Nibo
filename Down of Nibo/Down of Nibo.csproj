@@ -223,5 +223,10 @@
   <ItemGroup>
     <Resource Include="Assets\sprites\Hell-Beast-Files\GIF\without-stroke\Demon.png" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="ItemsAndEffects\Effects.txt" />
+    <Resource Include="ItemsAndEffects\Items.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -79,7 +79,7 @@ namespace Ez_Efect_Manager
                 {
                     Console.WriteLine(efect.Name + " | " + efect.Description);
                 }
-                Console.WriteLine("Speed | Dex | str | Dmg | Def");
+                Console.WriteLine("Speed | Dex | str | Dmg | Def | HP");
                 PrintStat(efect.FixedStats);
                 PrintStat(efect.MStats);
                 Console.WriteLine(new string('-', 50));
@@ -89,7 +89,7 @@ namespace Ez_Efect_Manager
         static void PrintStat(Stats stat)
         {
             
-            Console.WriteLine(stat.speed + " " + stat.dex + " " + stat.str + " " + stat.Dmg + " " + stat.Def);
+            Console.WriteLine(stat.speed + " " + stat.dex + " " + stat.str + " " + stat.Dmg + " " + stat.Def + " " + stat.HP);
         }
         static Item Additem()
         {
@@ -203,6 +203,10 @@ namespace Ez_Efect_Manager
             Console.WriteLine("Def");
             input = Console.ReadLine();
             stats.Def = Int32.Parse(input);
+
+            Console.WriteLine("HP");
+            input = Console.ReadLine();
+            stats.HP = Int32.Parse(input);
 
             return stats;
         }

@@ -76,9 +76,9 @@ namespace Down_of_Nibo
             Hell_Beast.Name = "Boss";
 
             Stats Hell_BeastStats = new Stats();
-            Hell_BeastStats.Def = 200;
-            Hell_BeastStats.Dmg = 300;
-            Hell_BeastStats.speed = 200;
+            Hell_BeastStats.Def = 650;
+            Hell_BeastStats.Dmg = 650;
+            Hell_BeastStats.speed = 650;
 
             Hell_Beast.Stats = Hell_BeastStats;
             Repository.AllMobs.Add(Hell_Beast);
