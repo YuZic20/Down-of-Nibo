@@ -146,6 +146,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bin\Debug\Down of Nibo.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -223,10 +224,26 @@
   <ItemGroup>
     <Resource Include="Assets\sprites\Hell-Beast-Files\GIF\without-stroke\Demon.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="ItemsAndEffects\Effects.txt" />
-    <Resource Include="ItemsAndEffects\Items.txt" />
+    <Resource Include="ItemsAndEffects\Effects.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ItemsAndEffects\Items.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\ClassLibrary2.dll" />
+    <Content Include="bin\Debug\ClassLibrary2.pdb" />
+    <Content Include="bin\Debug\Down of Nibo.exe" />
+    <Content Include="bin\Debug\Down of Nibo.pdb" />
+    <Resource Include="bin\Debug\ItemsAndEffects\Effects.txt" />
+    <Resource Include="bin\Debug\ItemsAndEffects\Items.txt" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.pdb" />
+    <Resource Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\WpfAnimatedGif.dll" />
+    <Resource Include="bin\Debug\WpfAnimatedGif.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

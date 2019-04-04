@@ -125,7 +125,7 @@ namespace Ez_item_effect
             }
             if (!removed)
             {
-                SelectedItem.Efects.Add((AEffect)ItemSender.Tag);
+                SelectedItem.Efects.Add((Effect_Duration)ItemSender.Tag);
 
             }
             fileHandle.SaveData(AllItems);

@@ -15,6 +15,16 @@ namespace Down_of_Nibo
 
         }
 
+        public static void GenerateContent()
+        {
+
+            GenerateEffects();
+            GenerateItems();
+            GenerateCombos();
+            GenerateQuests();
+
+        }
+
         public static void MCDied()
         {
             Globals.learndCombos = new List<Combo>();
@@ -187,54 +197,174 @@ namespace Down_of_Nibo
 
 
         }
-        public static void GenerateContent()
-        {
-            GenerateQuests();
-            GenerateCombos();
-        }
+        
         public static void GenerateCombos()
         {
 
-            Combo combo = new Combo();
-            combo.BaseDifficlty = 0;
-            combo.Description = "Oheň";
+            Combo combo = new Combo();            
+            combo.Name = "Seknutí";
+            combo.Description = "Sekne lehce nepřítele";
+            combo.BaseDifficlty = 3;
             Stats stats = new Stats();
-            stats.Def = 0;
-            stats.dex = 0;
-            stats.Dmg = 0;
-            stats.HP = 100;
-            stats.speed = 0;
+            stats.Def = 50;
+            stats.Dmg = 50;
+            stats.HP = 0;
+            stats.speed = 25;
+            stats.dex = 0;            
             stats.str = 0;
 
-            combo.BaseStats = stats;
-            combo.Name = "nwm";
-
-            Effect_Duration effect_Duration = new Effect_Duration();
-            effect_Duration.Description = "uff";
-            effect_Duration.Duration = 1;
-            effect_Duration.FixedStats = stats;
-            effect_Duration.MStats = stats;
-            effect_Duration.Name = "ufff";
-
-            combo.Effects.Add(effect_Duration);
-
+            combo.BaseStats = stats; 
+            combo.Effects.Add(Repository.AllEffects[10]);
             Repository.AllCombos.Add(combo);
-            
+
+            Combo combo2 = new Combo();
+            combo2.Name = "Ochrana";
+            combo2.Description = "Přidá lehkou ochranu";
+            combo2.BaseDifficlty = 3;
+            Stats stats2 = new Stats();
+            stats2.Def = 50;
+            stats2.Dmg = 50;
+            stats2.HP = 0;
+            stats2.speed = 25;
+            stats2.dex = 0;
+            stats2.str = 0;
+
+            combo2.BaseStats = stats2;
+            combo2.Effects.Add(Repository.AllEffects[12]);
+            Repository.AllCombos.Add(combo2);
+
+            Combo combo3 = new Combo();
+            combo3.Name = "Rychlost";
+            combo3.Description = "Přidá na rychlosti";
+            combo3.BaseDifficlty = 3;
+            Stats stats3 = new Stats();
+            stats3.Def = 50;
+            stats3.Dmg = 50;
+            stats3.HP = 0;
+            stats3.speed = 50;
+            stats3.dex = 0;
+            stats3.str = 0;
+
+            combo3.BaseStats = stats3;
+            combo3.Effects.Add(Repository.AllEffects[15]);
+            Repository.AllCombos.Add(combo3);
+
+            Combo combo4 = new Combo();
+            combo4.Name = "Silné ohnivé bodnutí";
+            combo4.Description = "Bodne nepřítele a ten začne krvácet a hořet zároveň";
+            combo4.BaseDifficlty = 5;
+            Stats stats4 = new Stats();
+            stats4.Def = 50;
+            stats4.Dmg = 150;
+            stats4.HP = 0;
+            stats4.speed = 55;
+            stats4.dex = 0;
+            stats4.str = 0;
+
+            combo4.BaseStats = stats4;
+            combo4.Effects.Add(Repository.AllEffects[10]);
+            combo4.Effects.Add(Repository.AllEffects[9]);
+            Repository.AllCombos.Add(combo4);
+
+            Combo combo5 = new Combo();
+            combo5.Name = "Aura Ochrany";
+            combo5.Description = "Udělá auru která ochrání cíl";
+            combo5.BaseDifficlty = 5;
+            Stats stats5 = new Stats();
+            stats5.Def = 150;
+            stats5.Dmg = 50;
+            stats5.HP = 0;
+            stats5.speed = 75;
+            stats5.dex = 0;
+            stats5.str = 0;
+
+            combo5.BaseStats = stats5;
+            combo5.Effects.Add(Repository.AllEffects[12]);
+            combo5.Effects.Add(Repository.AllEffects[14]);
+            Repository.AllCombos.Add(combo5);
+
+            Combo combo6 = new Combo();
+            combo6.Name = "boost";
+            combo6.Description = "prchající pocit rychlosti";
+            combo6.BaseDifficlty = 5;
+            Stats stats6 = new Stats();
+            stats6.Def = 50;
+            stats6.Dmg = 50;
+            stats6.HP = 0;
+            stats6.speed = 125;
+            stats6.dex = 0;
+            stats6.str = 0;
+
+            combo6.BaseStats = stats6;
+            combo6.Effects.Add(Repository.AllEffects[16]);
+            Repository.AllCombos.Add(combo6);
+
+            Combo combo7 = new Combo();
+            combo7.Name = "Silné Seknutí";
+            combo7.Description = "Sekne lehce nepřítele";
+            combo7.BaseDifficlty = 7;
+            Stats stats7 = new Stats();
+            stats7.Def = 100;
+            stats7.Dmg = 200;
+            stats7.HP = 0;
+            stats7.speed = 55;
+            stats7.dex = 0;
+            stats7.str = 0;
+
+            combo7.BaseStats = stats7;
+            combo7.Effects.Add(Repository.AllEffects[10]);
+            combo7.Effects.Add(Repository.AllEffects[11]);
+            Repository.AllCombos.Add(combo7);
+
+            Combo combo8 = new Combo();
+            combo8.Name = "Silná ochrana";
+            combo8.Description = "Využije veškerou sílů na jednorázovou ochranu";
+            combo8.BaseDifficlty = 7;
+            Stats stats8 = new Stats();
+            stats8.Def = 200;
+            stats8.Dmg = 150;
+            stats8.HP = 0;
+            stats8.speed = 100;
+            stats8.dex = 0;
+            stats8.str = 0;
+
+            combo8.BaseStats = stats8;
+            combo8.Effects.Add(Repository.AllEffects[12]);
+            combo8.Effects.Add(Repository.AllEffects[13]);
+            Repository.AllCombos.Add(combo8);
+
+            Combo combo9 = new Combo();
+            combo9.Name = "Aura ozáření";
+            combo9.Description = "Uživatel se cítí rychlejší o více chráněný";
+            combo9.BaseDifficlty = 7;
+            Stats stats9 = new Stats();
+            stats9.Def = 150;
+            stats9.Dmg = 150;
+            stats9.HP = 0;
+            stats9.speed = 125;
+            stats9.dex = 0;
+            stats9.str = 0;
+
+            combo9.BaseStats = stats9;
+            combo9.Effects.Add(Repository.AllEffects[13]);
+            combo9.Effects.Add(Repository.AllEffects[16]);
+            Repository.AllCombos.Add(combo9);
+
 
         }
         public static void GenerateEffects()
         {
-            FileHandle fileHandle = new FileHandle();
+            
 
-            Repository.AllEffects = fileHandle.LoadDataEfect();
+            Repository.AllEffects = GameFileHandle.LoadDataEfectGame();
 
         }
         public static void GenerateItems()
         {
 
-            FileHandle fileHandle = new FileHandle();
+            
 
-            Repository.AllItems = fileHandle.LoadDataItem();
+            Repository.AllItems = GameFileHandle.LoadDataItemGame();
 
 
         }
