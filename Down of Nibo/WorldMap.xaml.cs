@@ -62,6 +62,8 @@ namespace Down_of_Nibo
         private void Button_Click_Accept(object sender, RoutedEventArgs e)
         {
             //start battle
+            Globals.Mobs[1] = Repository.AllMobs[3];
+            Globals.Scene = 5;
             WinScrean.Visibility = Visibility.Visible;
         }
 

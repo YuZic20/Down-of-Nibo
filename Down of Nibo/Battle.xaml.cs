@@ -28,36 +28,23 @@ namespace Down_of_Nibo
         List<Image> MobGif = new List<Image>();
         List<Image> MobImage = new List<Image>();
         List<int> ComboClip = new List<int>();
+        DispatcherTimer timer = new DispatcherTimer();//když je myš na okně čas se seká
         int KeyDownSelect = 50;
         int KeyDownCombo = 50;
         public Battle()
         {
             InitializeComponent();
             Globals.AddTimer();
-            DispatcherTimer timer = new DispatcherTimer(); //když je myš na okně čas se seká
-            timer.Interval = TimeSpan.FromMilliseconds(1);
+            
+            timer.Interval = TimeSpan.FromMilliseconds(1); //timer set
             timer.Tick += timer_Tick;
             timer.Start();
             GenerateBattle();
             GetTimerSpeed();
 
-            /* test combo
-            Combo combo = new Combo();
-            combo.ComboCode.Add(1);
-            combo.ComboCode.Add(1);
-            combo.ComboCode.Add(1);
-            combo.ComboCode.Add(1);
-            Effect_Duration effect = new Effect_Duration();
-            effect.Duration = 2;
-            effect.Name = "ufff";
-            effect.FixedStats.HP = 20;
-            effect.MStats.HP = 0;
-            combo.Effects.Add(effect);
-            Globals.Player.Stats.Def = 5;
-
-            Globals.leaarndCombos.Add(combo);
-            */
+            
         }
+
         public void GenerateBattle()
         {
             
@@ -161,13 +148,15 @@ namespace Down_of_Nibo
                 {
                     //game Over
                     ContentCreator.MCDied();
-                    Globals.battle = null;
+                    timer.Stop();
+                    
                 }
                 else if (AreMobsDead())
                 {
                     //ecunter won
                     Globals.Scene = 3;
-                    Globals.battle.
+                    timer.Stop();
+                    
                 }
                 GetTimerSpeed();
                 playerAttacVisual();

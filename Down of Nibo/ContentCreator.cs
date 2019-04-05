@@ -10,10 +10,7 @@ namespace Down_of_Nibo
 {
     public static class ContentCreator
     {
-       public static void NewGame()
-        {
-
-        }
+       
 
         public static void GenerateContent()
         {
@@ -32,8 +29,10 @@ namespace Down_of_Nibo
             Globals.Player.died();
             GenerateMaps();
             GenerateQuests();
+            
+            GenerateContent();
+            Globals.World = new WorldMap();
             Globals.Scene = 3;
-
         }
         public static void GenerateMobs()
         {

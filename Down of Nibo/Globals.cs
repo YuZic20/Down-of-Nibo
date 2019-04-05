@@ -19,7 +19,6 @@ namespace Down_of_Nibo
         public static List<Quest>[] Quests { get; set; } = new List<Quest>[3];
         public static Stats Training { get; set; } = new Stats();
         public static WorldMap World { get; set; } = new WorldMap();
-        public static Battle battle { get; set; }
 
         static int scene;
         public static int Scene
@@ -76,8 +75,7 @@ namespace Down_of_Nibo
             }
             else if (scene == 5)
             {
-                battle = new Battle();
-                ExistingInstanceOfMainWindow.MainWindowFrame.Content = battle;
+                ExistingInstanceOfMainWindow.MainWindowFrame.Content = new Battle();
             }
             else if (scene == 6)
             {
