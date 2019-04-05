@@ -161,11 +161,13 @@ namespace Down_of_Nibo
                 {
                     //game Over
                     ContentCreator.MCDied();
+                    Globals.battle = null;
                 }
                 else if (AreMobsDead())
                 {
                     //ecunter won
                     Globals.Scene = 3;
+                    Globals.battle.
                 }
                 GetTimerSpeed();
                 playerAttacVisual();

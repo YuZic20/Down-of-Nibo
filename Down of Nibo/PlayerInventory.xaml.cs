@@ -104,7 +104,7 @@ namespace Down_of_Nibo
             }
 
             ItemsList.Children.Clear();
-            for(int i =0; i> Globals.Player.Inventory.items.Count();i++)
+            for(int i =0; i< Globals.Player.Inventory.items.Count();i++)
             {
                 Button button = new Button();
                 button.Content = Globals.Player.Inventory.items[i].Name;

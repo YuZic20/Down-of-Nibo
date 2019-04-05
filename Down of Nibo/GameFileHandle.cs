@@ -38,7 +38,12 @@ namespace Down_of_Nibo
                         });
 
             //string json = JsonConvert.SerializeObject(GameData);
-            System.IO.File.WriteAllText(realpath, json);
+
+            System.IO.FileInfo file = new System.IO.FileInfo(realpath);
+            file.Directory.Create(); // If the directory already exists, this method does nothing.
+            System.IO.File.WriteAllText(file.FullName, json);
+
+            
         }
 
         public static void LoadGame()

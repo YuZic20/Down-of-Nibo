@@ -27,8 +27,12 @@ namespace Down_of_Nibo
             InitializeComponent();
 
             ContentCreator.GenerateMaps();
-            ContentCreator.GenerateContent();                
 
+            ContentCreator.GenerateContent();
+
+            Globals.Player.Stats.Def = 20;
+            Globals.Player.Stats.speed = 20;
+            Globals.Player.Stats.Dmg = 20;
 
             Globals.Scene = 4;
             

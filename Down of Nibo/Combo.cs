@@ -76,9 +76,10 @@ namespace Down_of_Nibo
         public bool DoesComboExist(List<int> ComboToCheck, List<Combo> combos)
         {
             int lenght = ComboToCheck.Count();
-            int Strike = 0;
+          
             foreach (Combo ExistingCombo in combos) // kontrola existence komba
             {
+                int Strike=0;
                 if (ExistingCombo.ComboCode.Count() == lenght)
                 {
                     for (int i = lenght-1; i >= 0; i--)
@@ -89,15 +90,14 @@ namespace Down_of_Nibo
                         }
                     }
                 }
+                if (Strike == lenght)
+                {
+                    return true;
+                }
             }
-            if (Strike != lenght-1)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            
+            return false;
+            
             
         }
 

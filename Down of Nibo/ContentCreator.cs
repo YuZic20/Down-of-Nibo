@@ -21,6 +21,7 @@ namespace Down_of_Nibo
             GenerateEffects();
             GenerateItems();
             GenerateCombos();
+            GenerateMobs();
             GenerateQuests();
 
         }
@@ -138,73 +139,284 @@ namespace Down_of_Nibo
         }
         public static void GenerateQuests()
         {
-            //poslední quest nejde, přidat null exeption
 
-            List<Quest> quests = new List<Quest>();
-            Globals.Quests[0] = quests;
-
-            Quest quest = new Quest();
-            quest.decription = "kill em alll1";
-
-            Mob mob = new Mob();
-            mob.Stats.Dmg = 5;
-            quest.Mobs[1] = mob;           
-
-            //Globals.Quests[0].Add(quest);
+            Globals.Quests[0] = new List<Quest>();
+            Globals.Quests[1] = new List<Quest>();
+            Globals.Quests[2] = new List<Quest>();
 
 
+            Quest Train = new Quest();
+            Train.decription = "Tréning"; // trénig
 
-            Quest quest1 = new Quest();
-            quest1.decription = "kill em alll2";
-
-            Mob mob2 = new Mob();
-            mob2.Stats.Dmg = 5;
-            quest1.Mobs[1] = mob2;
-
-            Item item2 = new Item();
-            item2.Name = "Combo";
-            quest1.Reward = item2;
-
-            Globals.Quests[0].Add(quest1);
-
-            Quest quest2 = new Quest();
-            quest2.decription = "kill em alll3";
-
-            Mob mob3 = new Mob();
-            mob3.Stats.Dmg = 5;
-            quest2.Mobs[1] = mob3;
-
+            Quest Final = new Quest();
+            Final.decription = "Mistr tě už nemá co naučit, tohle je poslední tréning";           
+            
             Item item3 = new Item();
             item3.Name = "Last Training";
-            quest2.Reward = item3;
+            Final.Reward = item3;
 
+
+
+
+
+            Quest quest7 = new Quest();
+            quest7.decription = "Mistr Rychlosti v nesnází";
+
+            Item item7 = new Item();
+            item7.Name = "Combo";
+            item7.Eqip = 2;
+            quest7.Reward = item7;
+
+            Globals.Quests[0].Add(quest7);
+
+            Globals.Quests[0].Add(Train); // tréning
+
+            Quest quest1 = new Quest();
+            quest1.decription = "Tohle je bandita který tě dovede ke kempu";
+            quest1.Mobs[1] = Repository.AllMobs[0];
+            quest1.Reward = Repository.AllItems[0];
+            Globals.Quests[0].Add(quest1);
+
+            Globals.Quests[0].Add(Train); // tréning
+
+            Quest quest2 = new Quest();
+            quest2.decription = "od prvního ses dozvěděl že to ví druhý";
+            quest2.Mobs[1] = Repository.AllMobs[0];
+            quest2.Reward = Repository.AllItems[6];
             Globals.Quests[0].Add(quest2);
 
+            Globals.Quests[0].Add(Train); // tréning
+
+            Quest quest3 = new Quest();
+            quest3.decription = "Je tu spoustu nepřátel";
+            quest3.Mobs[1] = Repository.AllMobs[0];
+            quest3.Mobs[2] = Repository.AllMobs[0];
+            quest3.Reward = Repository.AllItems[12];
+            Globals.Quests[0].Add(quest3);
+
+            Quest quest8 = new Quest();
+            quest8.decription = "Nové kombo";
+
+            Item item8 = new Item();
+            item8.Name = "Combo";
+            item8.Eqip = 5;
+            quest8.Reward = item8;
+
+            Globals.Quests[0].Add(Train); // tréning
+
             Quest quest4 = new Quest();
-            quest4.decription = "kill em alll4";
-
-            Mob mob4 = new Mob();
-            mob4.Stats.Dmg = 5;
-            quest4.Mobs[1] = mob4;
-
-            Item item4 = new Item();
-            item4.Name = "Last Training";
-            quest4.Reward = item3;
-
+            quest4.decription = "Je tu spoustu nepřátel";
+            quest4.Mobs[1] = Repository.AllMobs[1];
+            quest4.Reward = Repository.AllItems[5];
             Globals.Quests[0].Add(quest4);
-            Globals.Quests[0].Add(quest4);
+
+            Globals.Quests[0].Add(Train); // tréning
+
+            Quest quest5 = new Quest();
+            quest5.decription = "Je tu spoustu nepřátel";
+            quest5.Mobs[0] = Repository.AllMobs[0];
+            quest5.Mobs[1] = Repository.AllMobs[0];
+            quest5.Mobs[2] = Repository.AllMobs[0];
+            quest5.Reward = Repository.AllItems[11];
+            Globals.Quests[0].Add(quest5);
+
+            Globals.Quests[0].Add(Train); // tréning
+
+            Quest quest6 = new Quest();
+            quest6.decription = "Je tu spoustu nepřátel";
+            quest6.Mobs[0] = Repository.AllMobs[0];
+            quest6.Mobs[1] = Repository.AllMobs[1];
+            quest6.Mobs[2] = Repository.AllMobs[0];
+            quest6.Reward = Repository.AllItems[16];
+            Globals.Quests[0].Add(quest6);
+
+            Quest quest9 = new Quest();
+            quest9.decription = "Nové kombo";
+
+            Item item9 = new Item();
+            item9.Name = "Combo";
+            item9.Eqip = 8;
+            quest9.Reward = item9;
+
+            Globals.Quests[0].Add(Final);
+
+            Quest quest10 = new Quest();
+            quest10.decription = "Mistr ochrany v nesnází";
+
+            Item item10 = new Item();
+            item10.Name = "Combo";
+            item10.Eqip = 1;
+            quest10.Reward = item10;
+
+            Globals.Quests[2].Add(quest10);
+
+            Globals.Quests[2].Add(Train); // tréning
+
+            Quest quest11 = new Quest();
+            quest11.decription = "byl jsi poslán mistrem aby jsi se zbavil zběhlého vojáka";
+            quest11.Mobs[1] = Repository.AllMobs[2];
+            quest11.Reward = Repository.AllItems[1];
+            Globals.Quests[2].Add(quest11);
+
+            Globals.Quests[2].Add(Train); // tréning
+
+            Quest quest12 = new Quest();
+            quest12.decription = "od prvního ses dozvěděl že druhý ví kde je jejich skríš";
+            quest12.Mobs[1] = Repository.AllMobs[2];
+            quest12.Reward = Repository.AllItems[7];
+            Globals.Quests[2].Add(quest12);
+
+            Globals.Quests[2].Add(Train); // tréning
+
+            Quest quest13 = new Quest();
+            quest13.decription = "Je tu spoustu nepřátel";
+            quest13.Mobs[1] = Repository.AllMobs[2];
+            quest13.Mobs[2] = Repository.AllMobs[2];
+            quest13.Reward = Repository.AllItems[13];
+            Globals.Quests[2].Add(quest13);
+
+            Quest quest14 = new Quest();
+            quest14.decription = "Nové kombo";
+
+            Item item14 = new Item();
+            item14.Name = "Combo";
+            item14.Eqip = 4;
+            quest14.Reward = item14;
+
+            Globals.Quests[2].Add(Train); // tréning
+
+            Quest quest15 = new Quest();
+            quest15.decription = "Je tu spoustu nepřátel";
+            quest15.Mobs[1] = Repository.AllMobs[5];
+            quest15.Reward = Repository.AllItems[3];
+            Globals.Quests[2].Add(quest15);
+
+            Globals.Quests[2].Add(Train); // tréning
+
+            Quest quest16 = new Quest();
+            quest16.decription = "Je tu spoustu nepřátel";
+            quest16.Mobs[0] = Repository.AllMobs[2];
+            quest16.Mobs[1] = Repository.AllMobs[2];
+            quest16.Mobs[2] = Repository.AllMobs[2];
+            quest16.Reward = Repository.AllItems[10];
+            Globals.Quests[2].Add(quest16);
+
+            Globals.Quests[2].Add(Train); // tréning
+
+            Quest quest17 = new Quest();
+            quest17.decription = "Je tu spoustu nepřátel";
+            quest17.Mobs[0] = Repository.AllMobs[2];
+            quest17.Mobs[1] = Repository.AllMobs[5];
+            quest17.Mobs[2] = Repository.AllMobs[2];
+            quest17.Reward = Repository.AllItems[15];
+            Globals.Quests[2].Add(quest17);
+
+            Quest quest18 = new Quest();
+            quest18.decription = "Nové kombo";
+
+            Item item18 = new Item();
+            item18.Name = "Combo";
+            item18.Eqip = 7;
+            quest18.Reward = item18;
+
+            Globals.Quests[2].Add(Final);
+
+            Quest quest19 = new Quest();
+            quest19.decription = "Mistr Síly v nesnází";
+
+            Item item19 = new Item();
+            item19.Name = "Combo";
+            item19.Eqip = 0;
+            quest19.Reward = item19;
+
+            Globals.Quests[1].Add(quest19);
+
+            Globals.Quests[1].Add(Train); // tréning
+
+            Quest quest20 = new Quest();
+            quest20.decription = "Tohle je Duch který mistra otravoval";
+            quest20.Mobs[1] = Repository.AllMobs[4];
+            quest20.Reward = Repository.AllItems[2];
+            Globals.Quests[1].Add(quest20);
+
+            Globals.Quests[1].Add(Train); // tréning
+
+            Quest quest21 = new Quest();
+            quest21.decription = "od mistra ses dozvěděl že možná ví kde je jejich líheň";
+            quest21.Mobs[1] = Repository.AllMobs[4];
+            quest21.Reward = Repository.AllItems[8];
+            Globals.Quests[1].Add(quest21);
+
+            Globals.Quests[1].Add(Train); // tréning
+
+            Quest quest22 = new Quest();
+            quest22.decription = "Je tu spoustu nepřátel";
+            quest22.Mobs[1] = Repository.AllMobs[4];
+            quest22.Mobs[2] = Repository.AllMobs[4];
+            quest22.Reward = Repository.AllItems[14];
+            Globals.Quests[1].Add(quest22);
+
+            Quest quest23 = new Quest();
+            quest23.decription = "Nové kombo";
+
+            Item item23 = new Item();
+            item23.Name = "Combo";
+            item23.Eqip = 3;
+            quest23.Reward = item23;
+
+            Globals.Quests[1].Add(Train); // tréning
+
+            Quest quest24 = new Quest();
+            quest24.decription = "Je tu spoustu nepřátel";
+            quest24.Mobs[1] = Repository.AllMobs[6];
+            quest24.Reward = Repository.AllItems[4];
+            Globals.Quests[1].Add(quest24);
+
+            Globals.Quests[1].Add(Train); // tréning
+
+            Quest quest25 = new Quest();
+            quest25.decription = "Je tu spoustu nepřátel";
+            quest25.Mobs[0] = Repository.AllMobs[4];
+            quest25.Mobs[1] = Repository.AllMobs[4];
+            quest25.Mobs[2] = Repository.AllMobs[4];
+            quest25.Reward = Repository.AllItems[9];
+            Globals.Quests[1].Add(quest25);
+
+            Globals.Quests[1].Add(Train); // tréning
+
+            Quest quest26 = new Quest();
+            quest26.decription = "Je tu spoustu nepřátel";
+            quest26.Mobs[0] = Repository.AllMobs[4];
+            quest26.Mobs[1] = Repository.AllMobs[6];
+            quest26.Mobs[2] = Repository.AllMobs[4];
+            quest26.Reward = Repository.AllItems[17];
+            Globals.Quests[1].Add(quest26);
+
+            Quest quest27 = new Quest();
+            quest27.decription = "Nové kombo";
+
+            Item item27 = new Item();
+            item27.Name = "Combo";
+            item27.Eqip = 6;
+            quest27.Reward = item27;
+
+            Globals.Quests[1].Add(Final);
+
+
+
+
 
 
 
         }
-        
+
         public static void GenerateCombos()
         {
 
             Combo combo = new Combo();            
             combo.Name = "Seknutí";
             combo.Description = "Sekne lehce nepřítele";
-            combo.BaseDifficlty = 3;
+            combo.BaseDifficlty = 0;
             Stats stats = new Stats();
             stats.Def = 50;
             stats.Dmg = 50;
